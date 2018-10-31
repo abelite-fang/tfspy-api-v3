@@ -1,0 +1,16 @@
+2018-10-31 22:08:17,180 INFO: update reg [in gate.py:44]
+2018-10-31 22:08:30,117 INFO: update reg [in gate.py:44]
+2018-10-31 22:09:17,182 INFO: update reg [in gate.py:44]
+2018-10-31 22:10:17,180 INFO: update reg [in gate.py:44]
+2018-10-31 22:11:17,178 INFO: update reg [in gate.py:44]
+2018-10-31 22:11:30,117 INFO: update reg [in gate.py:44]
+[2018-10-31 22:38:26,247] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+[2018-10-31 22:38:26,248] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-10-31 22:38:26,643] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-10-31 22:38:26,657] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-10-31 22:38:34,575] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [31/Oct/2018 22:38:34] "POST /v1/models/ini:predict HTTP/1.1" 200 -
+[2018-10-31 22:38:42,417] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [31/Oct/2018 22:38:42] "POST /v1/models/ini:predict HTTP/1.1" 200 -
+[2018-10-31 22:39:32,295] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-10-31 22:39:32,337] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-10-31 22:39:32,851] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-10-31 22:39:32,865] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839

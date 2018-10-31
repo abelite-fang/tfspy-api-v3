@@ -10,8 +10,13 @@ Pip packages (extra):
 - Structure:
   - gate
     - gate.py
-    - gate.log
   - registry
   - service
     - service.py
     - config.txt
+
+--- 
+Gate 
+--- 
+
+- an api gateway built with python3 and restful struct

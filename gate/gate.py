@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import os
+import sys
 import json
 import uuid
 import time
@@ -7,27 +8,44 @@ import sched
 import logging
 import argparse
 import datetime
-from flask import Flask, jsonify, request, redirect
+from flask import Flask, jsonify, request, redirect, Response
 from werkzeug import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
 
-# Global
+
+
+#----------------------------------------------------------
+#|		   Global		  |
+#----------------------------------------------------------
+### Configs
 save_location = '0'
+#logger = 0
 app = Flask(__name__)
 scheduler = BackgroundScheduler()
 
 
+# ogger = logging.getLogger('a')
+# andler = logging.FileHandler('gate.log')
+# andler.setFormatter(logging.Formatter(
+#	'%(asctime)s %(levelname)s: %(message)s '
+#    '[in %(pathname)s:%(lineno)d]'
+# )
+# ogger.addHandler(handler)
+# ogger.setLevel(logging.DEBUG)
 
+
+
+### Functions
 # Call Registry for Updating Config
-
 def update_reg():
 	print('update_reg hit')
-	
+	#global logger
+	global app
 	now = datetime.datetime.now()
-	logger.debug('Update Reg inFunction   time:', now)
+	#logger.info('update reg')
 	print(now)
 	pass
-scheduler.add_job(update_reg, 'interval', minutes=3)
+scheduler.add_job(update_reg, 'interval', minutes=1)
 scheduler.start()
 
 
@@ -50,12 +68,15 @@ def save_file(files):
 	spid = uuid.uuid4()
 	directory = save_location + '/' + str(spid)
 	if os.path.exists(directory):
-		return 0
+		# UUID Repeated
+		return 1
 	os.makedirs(directory)
 
+	# Store every files from upload to UUID/sample.file
 	for l in tmp:
 		filename = secure_filename(l.filename)
 		l.save(os.path.join(directory, l.filename))
+	# Return a UUID as the taskID
 	return spid
 
 
@@ -75,12 +96,13 @@ def v1_predict(modelName, action):
 
 
 	if action == 'predict' and request.method == 'POST':
-		if d == True : print(request.files)
 		if 'file' not in request.files:
-			return jsonify({'error':'no file'})
+			#return Response("[{'error':'no file', 'usage':'Please add key:file in the header'}]", status=500, mimetype='application/json')
+			return jsonify({'error':'no file', 'usage':'Please add key:file in the header'})
 		spid = save_file(request.files)
-		if spid == 0:
-			return jsonify({'error':'uuid stuck or internal error'})
+		if spid:
+			return Response("[{'error':'uuid repeated or internal error, please try again'}]", status=500, mimetype='application/json')
+			#return jsonify({'error':'uuid repeated or internal error, please try again'})
 		create_time = datetime.datetime.now()
 		content = request.json
 
@@ -98,8 +120,9 @@ def v1_predict(modelName, action):
 		# Dev Use
 		pass
 	else:
+		return Response("{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}", status=500, mimetype='application/json')
 		# Wrong Methods or Actions.
-		return jsonify({'error':'wrong action','action':'predict, result','method':'GET result, POST predict'})
+		#return jsonify({'error':'wrong action','action':'predict, result','method':'GET result, POST predict'})
 
 	return jsonify({modelName:action})
 
@@ -173,18 +196,18 @@ if __name__ == "__main__":
 		os.makedirs(save_location)
 
 
-
-	handler = logging.FileHandler('gate.log')
+	formatter = logging.Formatter(
+		"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
+	handler = logging.FileHandler('gate.log', encoding='UTF-8')
+	handler.setLevel(logging.DEBUG)
+	handler.setFormatter(formatter)
+	log = logging.getLogger('werkzeug')
+	log.setLevel(logging.DEBUG)
+	log.addHandler(handler)
 	app.logger.addHandler(handler)
-	app.logger.info('info log')
-	app.logger.info('debug log')
-	app.logger.info('warning log')
-	app.logger.info('error log')
-	app.logger.info('critical log')
 
-	app.debug = True
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
-
+	#app.logger.debug('Run Flask at ', datetime.datetime.now())
 	app.run(host=parsed.host, port=parsed.port, debug=True, use_reloader=True)
