@@ -54,11 +54,12 @@ scheduler.start()
 
 
 def upload_record(uid, files, create_time):
-	record = {'uuid':'0000', 'time':str(datetime.datetime.now()), 'file':'' }
-	record['uuid'] = uid
-	record['create_time'] = create_time
-	record['file'] = files
-
+	with open('record.json', 'w+') as f:
+		record = {'uuid':'0000', 'time':str(datetime.datetime.now()), 'file':'' }
+		record['uuid'] = uid
+		record['create_time'] = create_time
+		record['file'] = files
+		#json.dumps
 
 	return 1
 
@@ -91,18 +92,18 @@ def save_file(files):
 # Client <--> API Gate
 @app.route('/v1/models/<modelName>:<action>', methods=['POST'])
 def v1_predict(modelName, action):
-	debug = False
-	d = debug
+
 
 
 	if action == 'predict' and request.method == 'POST':
 		if 'file' not in request.files:
-			#return Response("[{'error':'no file', 'usage':'Please add key:file in the header'}]", status=500, mimetype='application/json')
-			return jsonify({'error':'no file', 'usage':'Please add key:file in the header'})
+			return Response("{'error':'no file', 'usage':'Please add key:file in the header'}", status=406, mimetype='application/json')
 		spid = save_file(request.files)
 		if spid:
-			return Response("[{'error':'uuid repeated or internal error, please try again'}]", status=500, mimetype='application/json')
-			#return jsonify({'error':'uuid repeated or internal error, please try again'})
+			return Response("{'error':'uuid repeated or internal error, please try again'}", status=500, mimetype='application/json')
+
+
+
 		create_time = datetime.datetime.now()
 		content = request.json
 
@@ -114,6 +115,8 @@ def v1_predict(modelName, action):
 		return jsonify({ modelName:action, 'UUID':spid})
 
 	elif action == 'result' and request.method == 'GET':
+		if 'file' not in request.files:
+			return Response("{'error':'no id for request', 'usage':'Please add id:id in the header'}", status=406, mimetype='application/json')
 		# Client GET result.
 		pass
 	elif action == 'report' and request.method == 'GET':
