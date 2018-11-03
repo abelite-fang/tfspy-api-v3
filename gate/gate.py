@@ -101,8 +101,9 @@ def v1_predict(modelName, action):
 	print (save_location)
 
 	if action == 'predict' and request.method == 'POST':
+		print("-d Predict")
 		if 'file' not in request.files:
-			msg = "{'error':'no file', 'usage':'Please add key:file in the header'}"
+			msg = "{'error':'no file', 'usage':'Please add key:file value=file in the body of file=@filename from curl'}"
 			code = 406
 			return Response(msg, status=code, mimetype='application/json')
 		spid = save_file(request.files)
@@ -111,27 +112,35 @@ def v1_predict(modelName, action):
 			msg = "{'error':'uuid repeated or internal error, please try again'}"
 			code = 500
 			return Response(msg, status=code, mimetype='application/json')
-		# Else: no error, then 
-		print(spid)
+		
 
-		createTime = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).astimezone(datetime.timezone(datetime.timedelta(hours=8)))
+		# set time to UTC+8
+		createTime = datetime.datetime.utcnow().replace(
+			tzinfo=datetime.timezone.utc).astimezone(
+				datetime.timezone(datetime.timedelta(hours=8)))
+
 		content = request.json
 		upload_record(spid, request.files, createTime, modelName)
 		# send()
 		return jsonify({ modelName:action, 'UUID':spid})
 
 	elif action == 'result' and request.method == 'GET':
-		print(request.form.get('id'))
-		if 'id' not in request.form.get('id'):
-			return Response("{'error':'no id for request', 'usage':'Please add id:id in the header'}", status=406, mimetype='application/json')
+		if 'id' not in request.headers:
+			msg = "{'error':'no ID for request', 'usage':'Please add ID: file_id or task_id in the header'}"
+			code = 406
+			return Response(msg, status=code, mimetype='application/json')
+		print(request.headers.get('id'))
 		# Client GET result.
 		pass
 	elif action == 'report' and request.method == 'GET':
+		print("-d Report")
 		# Dev Use
 		pass
 	else:
 		# Wrong Methods or Actions.
-		return Response("{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}", status=500, mimetype='application/json')
+		msg = "{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}"
+		code = 500
+		return Response(msg, status=code, mimetype='application/json')
 		
 	# For Now
 	return jsonify({modelName:action})
