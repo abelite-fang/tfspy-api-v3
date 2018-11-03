@@ -95,7 +95,7 @@ def save_file(files):
 #|		    Client <---> API Gate		  |
 #----------------------------------------------------------
 # Client <--> API Gate
-@app.route('/v1/models/<modelName>:<action>', methods=['POST'])
+@app.route('/v1/models/<modelName>:<action>')
 def v1_predict(modelName, action):
 	global save_location
 	print (save_location)
