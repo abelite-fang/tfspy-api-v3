@@ -86,3 +86,77 @@
 [2018-10-31 22:48:43,671] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
 [2018-10-31 22:48:44,034] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
 [2018-10-31 22:48:44,045] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:46:09,348] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+[2018-11-03 15:46:09,349] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:46:09,714] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:46:09,727] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:46:23,003] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+[2018-11-03 15:46:23,003] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:46:23,396] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:46:23,406] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:47:11,456] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [03/Nov/2018 15:47:11] "POST /v1/models/ini:predict HTTP/1.1" 406 -
+[2018-11-03 15:47:53,294] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:47:53,337] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:47:53,746] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:47:53,757] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:48:08,905] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:48:08,939] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:48:09,314] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:48:09,327] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:48:49,738] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:48:49,778] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:48:50,151] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:48:50,162] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:48:54,206] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:48:54,244] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:48:54,615] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:48:54,625] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:48:59,681] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:48:59,717] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:49:00,081] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:49:00,091] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:50:29,011] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:50:29,047] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:50:29,418] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:50:29,428] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:50:38,520] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:50:38,553] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:50:38,931] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:50:38,942] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:50:40,965] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:50:41,001] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:50:41,373] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:50:41,383] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:50:48,445] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:50:48,484] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:50:48,847] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:50:48,858] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:51:23,197] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:51:23,232] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:51:23,608] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:51:23,618] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:51:48,880] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:51:48,916] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:51:49,290] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:51:49,301] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:51:55,373] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:51:55,412] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:51:55,785] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:51:55,796] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:51:57,819] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:51:57,872] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-03 15:51:58,262] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-03 15:51:58,273] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-03 15:53:44,339] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:53:44,380] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+2018-11-03 15:53:44,778 - werkzeug - WARNING -  * Debugger is active!
+2018-11-03 15:53:44,789 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-03 15:54:14,089 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+[2018-11-03 15:54:14,144] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+2018-11-03 15:56:12,375 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-11-03 15:56:12,376 - werkzeug - INFO -  * Restarting with stat
+2018-11-03 15:56:12,824 - werkzeug - WARNING -  * Debugger is active!
+2018-11-03 15:56:12,836 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-03 15:56:17,021 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2018 15:56:17] "POST /v1/models/ini:predict HTTP/1.1" 406 -
+2018-11-03 15:58:02,988 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-03 15:58:03,030 - werkzeug - INFO -  * Restarting with stat

@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 @app.route('/v1/tasks', methods=['POST'])
 def taskin():
-	request.files
+	#request.files
 
 
 
@@ -55,11 +55,15 @@ if __name__ == "__main__":
 
 	app.debug = True
 
+	# Set Logs 
+	formatter = logging.Formatter(
+		"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
 	handler = logging.FileHandler('service.log', encoding='UTF-8')
-	handler.setLevel(logging.NOTSET)
-	logging_format = logging.Formatter(
-		'%(asctime)s-%(levelname)s-%(filename)s-%(funcName)s-%(lineno)s-%(message)s')
-	handler.setFormatter(logging_format)
+	handler.setLevel(logging.DEBUG)
+	handler.setFormatter(formatter)
+	log = logging.getLogger('werkzeug')
+	log.setLevel(logging.DEBUG)
+	log.addHandler(handler)
 	app.logger.addHandler(handler)
 
 	app.secret_key = 'v3superkey'

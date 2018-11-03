@@ -19,19 +19,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 #----------------------------------------------------------
 ### Configs
 save_location = '0'
-#logger = 0
 app = Flask(__name__)
 scheduler = BackgroundScheduler()
-
-
-# ogger = logging.getLogger('a')
-# andler = logging.FileHandler('gate.log')
-# andler.setFormatter(logging.Formatter(
-#	'%(asctime)s %(levelname)s: %(message)s '
-#    '[in %(pathname)s:%(lineno)d]'
-# )
-# ogger.addHandler(handler)
-# ogger.setLevel(logging.DEBUG)
 
 
 
@@ -53,15 +42,23 @@ scheduler.start()
 
 
 
-def upload_record(uid, files, create_time):
-	with open('record.json', 'w+') as f:
+def upload_record(uid, files, createTime, modelName):
+	global save_location
+	record_file = save_location + "/record.json"
+	with open(record_file , 'w+') as f:
 		record = {'uuid':'0000', 'time':str(datetime.datetime.now()), 'file':'' }
 		record['uuid'] = uid
-		record['create_time'] = create_time
-		record['file'] = files
-		#json.dumps
+		record['create_time'] = createTime
+		filelist = []
+		tmp = files.getlist("file")
+		for l in tmp:
+				filelist.append(l.filename)
 
-	return 1
+		record['file'] = filelist
+		print(record)
+		#json.dumps
+	return 0
+
 
 def save_file(files):
 	global save_location
@@ -69,8 +66,8 @@ def save_file(files):
 	spid = uuid.uuid4()
 	directory = save_location + '/' + str(spid)
 	if os.path.exists(directory):
-		# UUID Repeated
-		return 1
+		# Error: UUID Repeated
+		return 0
 	os.makedirs(directory)
 
 	# Store every files from upload to UUID/sample.file
@@ -92,25 +89,22 @@ def save_file(files):
 # Client <--> API Gate
 @app.route('/v1/models/<modelName>:<action>', methods=['POST'])
 def v1_predict(modelName, action):
-
-
+	global save_location
+	print (save_location)
 
 	if action == 'predict' and request.method == 'POST':
 		if 'file' not in request.files:
 			return Response("{'error':'no file', 'usage':'Please add key:file in the header'}", status=406, mimetype='application/json')
 		spid = save_file(request.files)
-		if spid:
+		if spid == 0:
 			return Response("{'error':'uuid repeated or internal error, please try again'}", status=500, mimetype='application/json')
+		# Else: no error, then 
+		print(spid)
 
-
-
-		create_time = datetime.datetime.now()
+		createTime = datetime.datetime.now()
 		content = request.json
-
-
-		#print(create_time)
-		#print(content)
-		#queue_append(  )
+		# record 
+		upload_record(spid, request.files, createTime, modelName)
 
 		return jsonify({ modelName:action, 'UUID':spid})
 
@@ -123,10 +117,10 @@ def v1_predict(modelName, action):
 		# Dev Use
 		pass
 	else:
-		return Response("{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}", status=500, mimetype='application/json')
 		# Wrong Methods or Actions.
-		#return jsonify({'error':'wrong action','action':'predict, result','method':'GET result, POST predict'})
-
+		return Response("{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}", status=500, mimetype='application/json')
+		
+	# For Now
 	return jsonify({modelName:action})
 
 
@@ -172,8 +166,10 @@ def page404(e):
 #|			Initialize			  |
 #----------------------------------------------------------
 if __name__ == "__main__":
+	# Default path of saving files
 	dirsave = []
 	dirsave.append(os.path.abspath(os.path.dirname(__file__)) + '/save')
+
 	parser = argparse.ArgumentParser(
 		description="API Gate of Self Designed Inference Service",
 		epilog='Developed by Wei Cheng \'dyingapple\' Fang')
@@ -199,18 +195,26 @@ if __name__ == "__main__":
 		os.makedirs(save_location)
 
 
-	formatter = logging.Formatter(
-		"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
+	# Set Logs 
+	#formatter = logging.Formatter(
+	#	"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
+	formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+	
 	handler = logging.FileHandler('gate.log', encoding='UTF-8')
 	handler.setLevel(logging.DEBUG)
 	handler.setFormatter(formatter)
+
+	ch = logging.StreamHandler(sys.stdout)
+	ch.setLevel(logging.DEBUG)
+	ch.addHandler(handler)
+
 	log = logging.getLogger('werkzeug')
 	log.setLevel(logging.DEBUG)
 	log.addHandler(handler)
+	
 	app.logger.addHandler(handler)
 
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
-	#app.logger.debug('Run Flask at ', datetime.datetime.now())
 	app.run(host=parsed.host, port=parsed.port, debug=True, use_reloader=True)
