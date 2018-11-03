@@ -45,18 +45,23 @@ scheduler.start()
 def upload_record(uid, files, createTime, modelName):
 	global save_location
 	record_file = save_location + "/record.json"
-	with open(record_file , 'w+') as f:
-		record = {'uuid':'0000', 'time':str(datetime.datetime.now()), 'file':'' }
-		record['uuid'] = uid
-		record['create_time'] = createTime
-		filelist = []
-		tmp = files.getlist("file")
-		for l in tmp:
-				filelist.append(l.filename)
+	record = {}
 
-		record['file'] = filelist
-		print(record)
-		#json.dumps
+
+	with open(record_file , 'w+') as f:
+		record['task'] = str(uid)
+		record['time'] = str(createTime)
+		if len(files.getlist("file")) == 1:
+			record['file_id'] = str(uid)
+			record['file_name'] = files.getlist("file")[0].filename
+			f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
+			f.write("," + "\n")
+		else:
+			for l in files.getlist("file"):
+				record['file_id'] = str(uuid.uuid4())
+				record['file_name'] = l.filename
+				f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
+				f.write("," + "\n")
 	return 0
 
 
@@ -101,7 +106,7 @@ def v1_predict(modelName, action):
 		# Else: no error, then 
 		print(spid)
 
-		createTime = datetime.datetime.now()
+		createTime = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).astimezone(datetime.timezone(datetime.timedelta(hours=8)))
 		content = request.json
 		# record 
 		upload_record(spid, request.files, createTime, modelName)
@@ -131,6 +136,7 @@ def v1_predict(modelName, action):
 #----------------------------------------------------------
 @app.route('/v1/ser/<uuid:UUID>')
 def v1_gpu(UUID):
+	#with open()
 	pass
 
 
@@ -203,15 +209,9 @@ if __name__ == "__main__":
 	handler = logging.FileHandler('gate.log', encoding='UTF-8')
 	handler.setLevel(logging.DEBUG)
 	handler.setFormatter(formatter)
-
-	ch = logging.StreamHandler(sys.stdout)
-	ch.setLevel(logging.DEBUG)
-	ch.addHandler(handler)
-
 	log = logging.getLogger('werkzeug')
 	log.setLevel(logging.DEBUG)
 	log.addHandler(handler)
-	
 	app.logger.addHandler(handler)
 
 
