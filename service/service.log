@@ -35,3 +35,48 @@
 [2018-11-07 15:57:00,225] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
 [2018-11-07 15:57:00,239] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
 [2018-11-07 15:57:12,626] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [07/Nov/2018 15:57:12] "[37mPOST /v1/tasks HTTP/1.1[0m" 200 -
+[2018-11-07 15:59:44,670] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 15:59:44,816] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 15:59:46,054] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 15:59:46,067] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:04:45,934] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 16:04:46,077] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:04:47,265] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:04:47,279] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:05:10,894] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 16:05:11,028] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:08:15,151] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Running on http://0.0.0.0:8500/ (Press CTRL+C to quit)
+[2018-11-07 16:08:15,153] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:08:16,341] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:08:16,353] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:08:48,229] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 16:08:48,378] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:08:49,826] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:08:49,844] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:09:03,234] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 16:09:03,375] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:09:04,656] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:09:04,670] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:09:06,738] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 16:09:06,877] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:09:08,175] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:09:08,190] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:09:15,304] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [07/Nov/2018 16:09:15] "[1m[35mPOST /v1/tasks HTTP/1.1[0m" 500 -
+[2018-11-07 16:09:34,964] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/service.py', reloading
+[2018-11-07 16:09:35,125] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:09:36,385] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:09:36,397] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:09:42,071] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [07/Nov/2018 16:09:42] "[1m[35mPOST /v1/tasks HTTP/1.1[0m" 500 -
+[2018-11-07 16:11:10,932] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/gpu/run.py', reloading
+[2018-11-07 16:11:11,067] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:11:12,230] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:11:12,243] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:11:28,735] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/gpu/run.py', reloading
+[2018-11-07 16:11:28,880] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:11:30,252] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:11:30,264] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:11:43,634] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/service/gpu/run.py', reloading
+[2018-11-07 16:11:43,779] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Restarting with stat
+[2018-11-07 16:11:45,044] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} WARNING -  * Debugger is active!
+[2018-11-07 16:11:45,057] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO -  * Debugger PIN: 210-888-839
+[2018-11-07 16:11:48,721] {/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py:88} INFO - 127.0.0.1 - - [07/Nov/2018 16:11:48] "[37mPOST /v1/tasks HTTP/1.1[0m" 200 -

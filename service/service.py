@@ -9,10 +9,9 @@ import datetime
 import tensorflow as tf
 from flask import Flask, jsonify, request, redirect
 from werkzeug import secure_filename
-from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
-#import gpu
-
+from gpu.run import *
+tfinfer = tf_inference()
 
 # Global
 app = Flask(__name__)
@@ -32,16 +31,17 @@ scheduler.add_job(update_reg, 'interval', minutes=1)
 scheduler.start()
 
 
-with tf.Session() as sess:
-	@app.route('/v1', methods=['GET'])
-	def hello():
-		return jsonify({'messages':'hello'})
-		pass
-	@app.route('/v1/tasks', methods=['POST'])
-	def taskin():
-		print('taskin')#request.files
-		return jsonify({'message':'task recieved'})
-		pass
+#with tf.Session() as sess:
+@app.route('/v1', methods=['GET'])
+def hello():
+	return jsonify({'messages':'hello'})
+	pass
+@app.route('/v1/tasks', methods=['POST'])
+def taskin():
+	print('taskin')#request.files
+	re = tfinfer.infer('ssss')
+	return jsonify({'message':re})
+	#pass
 
 
 
