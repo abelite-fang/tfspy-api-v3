@@ -8,6 +8,7 @@ import sched
 import logging
 import argparse
 import datetime
+import requests
 from flask import Flask, jsonify, request, redirect, Response
 from werkzeug import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -27,11 +28,9 @@ scheduler = BackgroundScheduler()
 ### Functions
 # Call Registry for Updating Config
 def update_reg():
-	print('update_reg hit')
-	#global logger
+	#print('update_reg hit')
 	global app
 	now = datetime.datetime.now()
-	#logger.info('update reg')
 	print(now)
 	pass
 scheduler.add_job(update_reg, 'interval', minutes=1)
@@ -95,11 +94,11 @@ def save_file(files):
 #|		    Client <---> API Gate		  |
 #----------------------------------------------------------
 # Client <--> API Gate
-@app.route('/v1/models/<modelName>:<action>')
+@app.route('/v1/models/<modelName>:<action>', methods=['GET','POST'])
 def v1_predict(modelName, action):
 	global save_location
 	print (save_location)
-
+	print(request.method)
 	if action == 'predict' and request.method == 'POST':
 		print("-d Predict")
 		if 'file' not in request.files:
@@ -121,6 +120,10 @@ def v1_predict(modelName, action):
 
 		content = request.json
 		upload_record(spid, request.files, createTime, modelName)
+
+		url = 'http://localhost:8500/v1/tasks'
+		res = requests.post(url)
+		print(res)
 		# send()
 		return jsonify({ modelName:action, 'UUID':spid})
 
@@ -131,6 +134,7 @@ def v1_predict(modelName, action):
 			return Response(msg, status=code, mimetype='application/json')
 		print(request.headers.get('id'))
 		# Client GET result.
+
 		pass
 	elif action == 'report' and request.method == 'GET':
 		print("-d Report")

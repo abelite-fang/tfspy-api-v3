@@ -540,3 +540,79 @@
 2018-11-03 18:15:45,148 - werkzeug - INFO -  * Restarting with stat
 2018-11-03 18:15:45,524 - werkzeug - WARNING -  * Debugger is active!
 2018-11-03 18:15:45,535 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 10:07:51,763 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-11-07 10:07:51,764 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 10:07:52,114 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 10:07:52,132 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 10:13:44,767 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 10:13:44,804 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 10:13:45,163 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 10:13:45,173 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 10:40:50,042 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 10:40:50,082 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 10:40:50,484 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 10:40:50,497 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 10:46:29,081 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 10:46:29,118 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 10:46:29,485 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 10:46:29,495 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:02:26,429 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:02:26] "[1m[31mPOST /v1/models/ini:predict HTTP/1.1[0m" 405 -
+2018-11-07 11:03:19,845 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:03:19,890 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:03:20,426 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:03:20,439 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:03:31,057 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-11-07 11:03:31,059 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:03:31,461 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:03:31,473 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:03:36,116 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:03:36] "[1m[31mPOST /v1/models/ini:predict HTTP/1.1[0m" 405 -
+2018-11-07 11:04:31,934 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:04:31] "[1m[31mPOST /v1/models/ini:predict HTTP/1.1[0m" 405 -
+2018-11-07 11:05:10,547 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:05:10,595 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:05:10,985 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:05:10,995 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:05:18,069 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:05:18] "[1m[31mPOST /v1/models/ini:predict HTTP/1.1[0m" 405 -
+2018-11-07 11:05:54,829 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-11-07 11:05:54,830 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:05:55,181 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:05:55,191 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:06:33,615 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:06:33,657 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:06:34,089 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:06:34,100 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:06:35,926 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:06:35] "[37mPOST /v1/models/ini:predict HTTP/1.1[0m" 200 -
+2018-11-07 11:08:18,257 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:08:18,294 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:08:18,650 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:08:18,660 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:08:27,758 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:08:27,791 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:08:28,163 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:08:28,175 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:08:42,933 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:08:42] "[1m[35mPOST /v1/models/ini:predict HTTP/1.1[0m" 500 -
+2018-11-07 11:08:59,510 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:08:59,568 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:09:00,115 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:09:00,128 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:09:12,295 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:09:12,337 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:09:12,757 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:09:12,767 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:09:14,104 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:09:14] "[1m[35mPOST /v1/models/ini:predict HTTP/1.1[0m" 500 -
+2018-11-07 11:09:29,993 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 11:09:30,059 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 11:09:30,504 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 11:09:30,518 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 11:09:35,085 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 11:09:35] "[1m[35mPOST /v1/models/ini:predict HTTP/1.1[0m" 500 -
+2018-11-07 15:49:02,363 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 15:49:02] "[1m[35mPOST /v1/models/ini:predict HTTP/1.1[0m" 500 -
+2018-11-07 15:49:50,182 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 15:49:50,246 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 15:49:50,853 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 15:49:50,865 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 15:49:53,988 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 15:49:53] "[37mPOST /v1/models/ini:predict HTTP/1.1[0m" 200 -
+2018-11-07 15:50:55,727 - werkzeug - INFO -  * Detected change in '/Users/dyingapple/PrTf/api-gateway-v3/gate/gate.py', reloading
+2018-11-07 15:50:55,775 - werkzeug - INFO -  * Restarting with stat
+2018-11-07 15:50:56,196 - werkzeug - WARNING -  * Debugger is active!
+2018-11-07 15:50:56,208 - werkzeug - INFO -  * Debugger PIN: 210-888-839
+2018-11-07 15:50:59,966 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 15:50:59] "[37mPOST /v1/models/ini:predict HTTP/1.1[0m" 200 -
+2018-11-07 15:57:12,628 - werkzeug - INFO - 127.0.0.1 - - [07/Nov/2018 15:57:12] "[37mPOST /v1/models/ini:predict HTTP/1.1[0m" 200 -
