@@ -44,7 +44,9 @@ def taskin():
 	#pass
 
 
-
+@app.route('/v1/healthcheck', methods=['GET'])
+def healthcheck():
+	return jsonify
 
 
 
