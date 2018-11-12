@@ -1,0 +1,1 @@
+[{"name": "resnet", "base_path": "/notebooks/train-data/ResNet-50v2", "model_platform": "tensorflow", "version": "1538687370"}]

@@ -11,6 +11,8 @@ from flask import Flask, jsonify, request, redirect
 from werkzeug import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
 from gpu.run import *
+
+
 tfinfer = tf_inference()
 
 # Global
@@ -38,15 +40,20 @@ def hello():
 	pass
 @app.route('/v1/tasks', methods=['POST'])
 def taskin():
+	#request.files
+	print(request.data)
+	print(request.form)
+	print(request.files)
+
 	print('taskin')#request.files
-	re = tfinfer.infer('ssss')
+	re = tfinfer.infer('resnet', request.files)
 	return jsonify({'message':re})
-	#pass
+
 
 
 @app.route('/v1/healthcheck', methods=['GET'])
 def healthcheck():
-	return jsonify
+	return jsonify({'messages':'ssss'})
 
 
 
@@ -75,31 +82,7 @@ if __name__ == "__main__":
 		nargs=1,
 		default='config.txt')
 	parsed, unparsed = parser.parse_known_args()
-	'''
-	parser = argparse.ArgumentParser(
-		description="API Gate of Self Designed Inference Service",
-		epilog='Developed by Wei Cheng \'dyingapple\' Fang')
-	parser.add_argument('--host',
-		help="Host running IP, default=0.0.0.0",
-		type=str,
-		nargs=1,
-		default='0.0.0.0')
-	parser.add_argument('-p', '--port',
-		help="Host running port, default=8501",
-		type=str,
-		nargs=1,
-		default='8501')
-	parser.add_argument('-s','--save',
-		help="File saved location, default=.",
-		type=str,
-		nargs=1,
-		default=dirsave)
-	parsed, unparsed = parser.parse_known_args()
-	'''
 	configFile = os.path.abspath(parsed.file[0])
-	#if not os.path.exists(save_location):
-	#	os.makedirs(save_location)
-
 	app.debug = True
 
 	# Set Logs 

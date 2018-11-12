@@ -9,6 +9,7 @@ import logging
 import argparse
 import datetime
 import requests
+import base64
 from flask import Flask, jsonify, request, redirect, Response
 from werkzeug import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -39,11 +40,10 @@ scheduler.start()
 
 
 
-
-
 def upload_record(uid, files, createTime, modelName):
 	global save_location
 	record_file = save_location + "/record.json"
+	resp = []
 	record = {}
 	'''
 	 Save metadata into two parts for client to dig
@@ -59,18 +59,23 @@ def upload_record(uid, files, createTime, modelName):
 			record['file_name'] = files.getlist("file")[0].filename
 			f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 			f.write("," + "\n")
+			resp.append(record)
 		else:
 			for l in files.getlist("file"):
 				record['file_id'] = str(uuid.uuid4())
 				record['file_name'] = l.filename
 				f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 				f.write("," + "\n")
-	return 0
+				resp.append(record)
+	return resp
 
 
 def save_file(files):
 	global save_location
+	print(files)
+	print('!' * 10)
 	tmp = files.getlist("file")
+	print(tmp)
 	spid = uuid.uuid4()
 	directory = save_location + '/' + str(spid)
 	if os.path.exists(directory):
@@ -94,12 +99,12 @@ def save_file(files):
 #|		    Client <---> API Gate		  |
 #----------------------------------------------------------
 # Client <--> API Gate
-@app.route('/v1/models/<modelName>:<action>', methods=['GET','POST'])
-def v1_predict(modelName, action):
+@app.route('/v1/models/<modelName>', methods=['GET','POST'])
+def v1_predict(modelName):
 	global save_location
 	print (save_location)
 	print(request.method)
-	if action == 'predict' and request.method == 'POST':
+	if request.method == 'POST':
 		print("-d Predict")
 		if 'file' not in request.files:
 			msg = "{'error':'no file', 'usage':'Please add key:file value=file in the body of file=@filename from curl'}"
@@ -119,15 +124,21 @@ def v1_predict(modelName, action):
 				datetime.timezone(datetime.timedelta(hours=8)))
 
 		content = request.json
-		upload_record(spid, request.files, createTime, modelName)
-
+		resp = upload_record(spid, request.files, createTime, modelName)
+		print(resp)
 		url = 'http://localhost:8500/v1/tasks'
-		res = requests.post(url)
+		files = []
+		for l in resp:
+			print(l)
+			loca = save_location+'/'+str(spid)+'/'+l['file_name']
+			files.append( ('file',( l['file_id'], open(loca, 'rb'))) )
+		print(files)
+		res = requests.post(url, files=files)
 		print(res)
 		# send()
-		return jsonify({ modelName:action, 'UUID':spid})
+		return jsonify({ modelName:modelName, 'UUID':spid})
 
-	elif action == 'result' and request.method == 'GET':
+	elif request.method == 'GET':
 		if 'id' not in request.headers:
 			msg = "{'error':'no ID for request', 'usage':'Please add ID: file_id or task_id in the header'}"
 			code = 406
@@ -136,10 +147,10 @@ def v1_predict(modelName, action):
 		# Client GET result.
 
 		pass
-	elif action == 'report' and request.method == 'GET':
-		print("-d Report")
-		# Dev Use
-		pass
+#	elif action == 'report' and request.method == 'GET':
+#		print("-d Report")
+#		# Dev Use
+#		pass
 	else:
 		# Wrong Methods or Actions.
 		msg = "{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}"
