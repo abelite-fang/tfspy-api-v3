@@ -44,29 +44,35 @@ def upload_record(uid, files, createTime, modelName):
 	global save_location
 	record_file = save_location + "/record.json"
 	resp = []
-	record = {}
+	init_dict = {}
 	'''
 	 Save metadata into two parts for client to dig
 	  1. Task ID
 	  2. File ID
 	'''
-	with open(record_file , 'w+') as f:
-		record['task'] = str(uid)
-		record['time'] = str(createTime)
+	with open(record_file , 'a') as f:
+		init_dict['task'] = str(uid)
+		init_dict['time'] = str(createTime)
 		# If > one file, create id for each file_id, if only one -> file_id = task_id
 		if len(files.getlist("file")) == 1:
+			record = init_dict.copy()
 			record['file_id'] = str(uid)
 			record['file_name'] = files.getlist("file")[0].filename
+			resp.append(record)
 			f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 			f.write("," + "\n")
-			resp.append(record)
 		else:
 			for l in files.getlist("file"):
+				record = init_dict.copy()
 				record['file_id'] = str(uuid.uuid4())
 				record['file_name'] = l.filename
+				resp.append(record)
+				print(record)
 				f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 				f.write("," + "\n")
-				resp.append(record)
+	print('-----upload_record------')
+	print(resp)
+	print('------------------------')
 	return resp
 
 
@@ -125,6 +131,7 @@ def v1_predict(modelName):
 
 		content = request.json
 		resp = upload_record(spid, request.files, createTime, modelName)
+		print("----DEBUG----")
 		print(resp)
 		url = 'http://localhost:8500/v1/tasks'
 		files = []
@@ -249,4 +256,4 @@ if __name__ == "__main__":
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
-	app.run(host=parsed.host, port=parsed.port, debug=True, use_reloader=True)
+	app.run(host=parsed.host, port=parsed.port, debug=False, use_reloader=True)
