@@ -46,7 +46,7 @@ def taskin():
 	print(request.files)
 
 	print('taskin')#request.files
-	re = tfinfer.infer('joking', request.files)
+	re = tfinfer.infer('cpu-res-jpg', request.files)
 	return jsonify({'message':re})
 
 
