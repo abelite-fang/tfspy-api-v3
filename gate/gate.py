@@ -32,7 +32,7 @@ def update_reg():
 	#print('update_reg hit')
 	global app
 	now = datetime.datetime.now()
-	print(now)
+	#print(now)
 	pass
 scheduler.add_job(update_reg, 'interval', minutes=1)
 scheduler.start()
@@ -67,21 +67,22 @@ def upload_record(uid, files, createTime, modelName):
 				record['file_id'] = str(uuid.uuid4())
 				record['file_name'] = l.filename
 				resp.append(record)
-				print(record)
+				#print(record)
 				f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 				f.write("," + "\n")
-	print('-----upload_record------')
-	print(resp)
-	print('------------------------')
+	#print('-----upload_record------')
+	#print(resp)
+	#print('------------------------')
 	return resp
+
 
 
 def save_file(files):
 	global save_location
-	print(files)
-	print('!' * 10)
+	#print(files)
+	#print('!' * 10)
 	tmp = files.getlist("file")
-	print(tmp)
+	#print(tmp)
 	spid = uuid.uuid4()
 	directory = save_location + '/' + str(spid)
 	if os.path.exists(directory):
@@ -108,10 +109,10 @@ def save_file(files):
 @app.route('/v1/models/<modelName>', methods=['GET','POST'])
 def v1_predict(modelName):
 	global save_location
-	print (save_location)
-	print(request.method)
+	#print(save_location)
+	#print(request.method)
 	if request.method == 'POST':
-		print("-d Predict")
+#		print("-d Predict")
 		if 'file' not in request.files:
 			msg = "{'error':'no file', 'usage':'Please add key:file value=file in the body of file=@filename from curl'}"
 			code = 406
@@ -128,22 +129,24 @@ def v1_predict(modelName):
 		createTime = datetime.datetime.utcnow().replace(
 			tzinfo=datetime.timezone.utc).astimezone(
 				datetime.timezone(datetime.timedelta(hours=8)))
-
 		content = request.json
 		resp = upload_record(spid, request.files, createTime, modelName)
-		print("----DEBUG----")
-		print(resp)
-		url = 'http://localhost:8500/v1/tasks'
+		url = 'http://localhost:8500/v1/tasks/' + modelName
 		files = []
 		for l in resp:
-			print(l)
 			loca = save_location+'/'+str(spid)+'/'+l['file_name']
 			files.append( ('file',( l['file_id'], open(loca, 'rb'))) )
-		print(files)
 		res = requests.post(url, files=files)
-		print(res)
+		#print(res.text)
+		if res.status_code == 200:
+			print('return@ ', datetime.datetime.now())
+			return res.text
+		return jsonify({"messages":"error at get answer from service"})
 		# send()
-		return jsonify({ modelName:modelName, 'UUID':spid})
+		#return jsonify({ modelName:modelName, 'UUID':spid})
+		
+		print('c = ', datetime.datetime.now())
+		return res.text
 
 	elif request.method == 'GET':
 		if 'id' not in request.headers:
@@ -225,9 +228,9 @@ if __name__ == "__main__":
 		default='0.0.0.0')
 	parser.add_argument('-p', '--port',
 		help="Host running port, default=8501",
-		type=str,
+		type=int,
 		nargs=1,
-		default='8501')
+		default=8501)
 	parser.add_argument('-s','--save',
 		help="File saved location, default=.",
 		type=str,
@@ -256,4 +259,6 @@ if __name__ == "__main__":
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
+	if isinstance(parsed.port, list):
+		parsed.port = parsed.port[0]
 	app.run(host=parsed.host, port=parsed.port, debug=False, use_reloader=True)

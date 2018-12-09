@@ -1,0 +1,986 @@
+2018-12-05 11:30:16,942 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-05 11:30:16,943 - werkzeug - INFO -  * Restarting with stat
+2018-12-05 11:30:47,489 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-05 11:30:47,490 - werkzeug - INFO -  * Restarting with stat
+2018-12-05 11:31:22,016 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-05 11:31:22,017 - werkzeug - INFO -  * Restarting with stat
+2018-12-05 11:32:13,012 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-05 11:32:13,013 - werkzeug - INFO -  * Restarting with stat
+2018-12-05 11:39:15,332 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 11:39:15] "POST /v1/models/resnet:predict HTTP/1.1" 200 -
+2018-12-05 11:43:17,245 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 11:43:17] "POST /v1/models/resnet:predict HTTP/1.1" 200 -
+2018-12-05 12:42:23,760 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 12:42:23] "POST /v1/models/resnet:predict HTTP/1.1" 200 -
+2018-12-05 12:48:29,889 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-05 12:48:29,924 - werkzeug - INFO -  * Restarting with stat
+2018-12-05 12:48:37,339 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-05 12:48:37,370 - werkzeug - INFO -  * Restarting with stat
+2018-12-05 12:50:39,620 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 12:50:39] "[37mPOST /v1/models/resnet:predict HTTP/1.1[0m" 200 -
+2018-12-05 12:51:53,823 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 12:51:53] "[37mPOST /v1/models/resnet:predict HTTP/1.1[0m" 200 -
+2018-12-05 12:52:27,179 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 12:52:27] "[37mPOST /v1/models/cpu-res-jpg:predict HTTP/1.1[0m" 200 -
+2018-12-05 12:53:10,352 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 12:53:10] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-05 12:53:21,706 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 12:53:21] "[37mPOST /v1/models/joking HTTP/1.1[0m" 200 -
+2018-12-05 13:00:20,169 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 13:00:20] "[1m[31mGET /v1/models/cpu-res-jpg HTTP/1.1[0m" 406 -
+2018-12-05 13:01:04,372 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 13:01:04] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-05 13:02:06,395 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 13:02:06] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-05 13:03:01,758 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 13:03:01] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-05 13:09:03,648 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 13:09:03] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-05 13:15:06,961 - werkzeug - INFO - 192.168.201.2 - - [05/Dec/2018 13:15:06] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 06:54:14,264 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-06 06:54:14,265 - werkzeug - INFO -  * Restarting with stat
+2018-12-06 07:03:07,627 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 07:03:07] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 07:04:37,889 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 07:04:37] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 07:15:22,677 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 07:15:22] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 07:21:56,787 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 07:21:56] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:05:53,902 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-06 09:05:53,902 - werkzeug - INFO -  * Restarting with stat
+2018-12-06 09:06:11,884 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:06:11] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:06:46,658 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:06:46] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:07:55,523 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:07:55] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:08:26,949 - flask.app - ERROR - Exception on /v1/models/cpu-res-jpg [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f92d455c2b0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/cpu-res-jpg (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92d455c2b0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 144, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/cpu-res-jpg (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92d455c2b0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-06 09:08:26,955 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:08:26] "[1m[35mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 500 -
+2018-12-06 09:08:32,600 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:08:32] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:09:45,914 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:09:45] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:12:25,995 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:12:25] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:13:18,588 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:13:18] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 09:13:58,370 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 09:13:58] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 11:30:26,086 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 11:30:26] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 12:21:40,171 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 12:21:40] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 12:22:11,286 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 12:22:11] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 12:24:29,651 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 12:24:29] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 12:26:25,069 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 12:26:25] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 12:31:21,761 - werkzeug - INFO - 127.0.0.1 - - [06/Dec/2018 12:31:21] "[1m[31mGET /v1/models/resnet HTTP/1.1[0m" 406 -
+2018-12-06 13:06:22,296 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-06 13:06:22,297 - werkzeug - INFO -  * Restarting with stat
+2018-12-06 13:06:29,801 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:06:29] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:14:25,261 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:14:25] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:15:12,344 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:15:12] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:17:31,081 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:17:31] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:19:42,526 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:19:42] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:26:07,397 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:26:07] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:27:26,232 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:27:26] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:28:05,024 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:28:05] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:29:03,563 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:29:03] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:35:45,163 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:35:45] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:38:35,176 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:38:35] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:43:19,392 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:43:19] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:46:49,901 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:46:49] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-06 13:49:09,377 - werkzeug - INFO - 192.168.201.2 - - [06/Dec/2018 13:49:09] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-07 08:23:05,661 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-07 08:23:05,662 - werkzeug - INFO -  * Restarting with stat
+2018-12-07 13:21:14,465 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-07 13:21:14,466 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 05:37:01,265 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:37:01] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-08 05:37:16,717 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:37:16] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 05:48:45,125 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:48:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 05:51:57,888 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:51:57] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 05:53:10,595 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:53:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 05:56:09,937 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:56:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 05:58:12,502 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 05:58:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:01:30,789 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:01:30] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:01:54,385 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:01:54] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:03:05,980 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:03:05] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:04:00,047 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:04:00] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:04:48,305 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:04:48] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:06:23,212 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:06:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:07:20,684 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:07:20] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:08:03,635 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:08:03] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:09:45,006 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:09:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:10:55,378 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 06:10:55,416 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:11:00,620 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:11:00,620 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:11:22,652 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 921, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 59, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/test.py", line 923, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'Response' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in make_response
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 921, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 59, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/test.py", line 923, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'Response' object is not callable
+The view function did not return a valid response. The return type must be a string, tuple, Response instance, or WSGI callable, but it was a Response.
+2018-12-08 06:11:22,655 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:11:22] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-08 06:11:56,714 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 06:11:56,762 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:12:01,026 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:12:01,027 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:12:09,495 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:12:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:12:25,742 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 06:12:25,779 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:12:28,381 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:12:28,381 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:12:33,361 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:12:33] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:13:01,212 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 06:13:01,247 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:13:06,490 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:13:06,490 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:14:04,594 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 06:14:04,637 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:14:09,049 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:14:09,050 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:14:12,668 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:14:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:14:43,677 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:14:43] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:15:33,971 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:15:33] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:15:35,565 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:15:35] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:15:35,616 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:15:35] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:15:54,356 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:15:54] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:15:54,382 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:15:54] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:15:54,403 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:15:54] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:16:20,162 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:16:20] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:16:23,735 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:16:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:16:23,808 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:16:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:18:21,533 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:18:21,533 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:26:35,042 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fec86921390>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec86921390>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 144, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec86921390>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 06:26:35,048 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:26:35] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-08 06:26:36,203 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fec8463c9e8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec8463c9e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 144, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec8463c9e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 06:26:36,204 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:26:36] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-08 06:26:37,301 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fec8432a2e8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec8432a2e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 144, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec8432a2e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 06:26:37,303 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:26:37] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-08 06:27:43,608 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:27:43] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:27:43,619 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:27:43] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:27:43,619 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:27:43] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:30:10,175 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:30:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:30:21,389 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:30:21] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:30:47,110 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 06:30:47,155 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:30:53,081 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 06:30:53,082 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 06:30:56,850 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:30:56] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:31:04,093 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:31:04] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:31:07,801 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:31:07] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:31:14,810 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:31:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:32:45,466 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:32:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:32:55,915 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:32:55] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:33:00,081 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:33:00] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:33:28,243 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:33:28] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:33:37,846 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:33:37] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:33:44,676 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:33:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:33:53,489 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:33:53] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:34:14,532 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:34:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:39:29,460 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:39:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:39:44,682 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:39:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:39:59,940 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:39:59] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:41:42,296 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:41:42] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:41:45,550 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:41:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:41:48,400 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:41:48] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:41:51,389 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:41:51] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:41:54,914 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:41:54] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:45:28,234 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:45:28] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:46:06,395 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:46:06] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:47:39,802 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:47:39] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:48:10,119 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:48:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:48:53,109 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:48:53] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:49:36,064 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:49:36] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:51:00,158 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:51:00] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:51:23,378 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:51:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:51:46,981 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:51:46] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:51:51,884 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:51:51] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:52:03,029 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:52:03] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:20,858 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:20] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:29,180 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:32,108 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:32] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:33,974 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:33] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:38,290 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:38] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:39,496 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:39] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:41,904 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:53:41,957 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:53:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:10,453 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:13,336 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:29,966 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:32,077 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:32] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:32,092 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:32] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:32,147 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:32] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:44,768 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:45,922 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:47,857 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:47] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 06:58:47,925 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 06:58:47] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:11:01,702 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:11:01] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:11:04,792 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:11:04] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:11:08,227 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:11:08] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:11:09,294 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:11:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:27:04,430 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 07:27:04,468 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 07:27:10,655 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 07:27:10,656 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 07:31:22,765 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:31:22] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:43:57,178 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:43:57] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:44:05,719 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:44:05] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 07:44:12,369 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 07:44:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 09:22:11,543 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 09:22:11] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:12:37,376 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 18:12:37,377 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 18:13:04,347 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:13:04] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:13:20,271 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-08 18:13:20,309 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 18:14:03,917 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-08 18:14:03,917 - werkzeug - INFO -  * Restarting with stat
+2018-12-08 18:14:08,960 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:14:08] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:14:14,830 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:14:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:14:21,096 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:14:21] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:14:26,321 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:14:26] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:14:27,665 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:14:27] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:14:28,818 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:14:28] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:15:42,907 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:15:42] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:15:42,920 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:15:42] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:16:00,093 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:16:00] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:16:44,081 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:16:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:16:44,082 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:16:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:08,844 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:08] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:13,258 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:20,480 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:20] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:24,666 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:24] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:28,915 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:28] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:32,750 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:32] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:36,741 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:36] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:41,162 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:46,462 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:46] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:17:51,917 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:17:51] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:18:59,636 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fce5dbb0198>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fce5dbb0198>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 145, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fce5dbb0198>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 18:18:59,642 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:18:59] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-08 18:19:01,562 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fce4f5c71d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fce4f5c71d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 145, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fce4f5c71d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 18:19:01,563 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:01] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-08 18:19:13,546 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:15,331 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:15] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:17,308 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:17] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:19,132 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:19] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:21,009 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:21] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:23,012 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:25,319 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:25] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:27,726 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:27] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:19:30,034 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:19:30] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:20:56,885 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:20:56] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:20:58,883 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:20:58] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:00,639 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:00] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:02,179 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:02] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:03,810 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:03] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:05,493 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:05] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:07,376 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:07] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:10,128 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:13,498 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:21:15,918 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:21:15] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:11,115 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:11] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:14,277 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:22,829 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:22] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:26,398 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:26] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:35,311 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:35] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:53,799 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:53] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:31:58,093 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:31:58] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:04,294 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:04] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:10,310 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:17,598 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:17] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:35,316 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:35] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:41,851 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:47,706 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:47] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:32:53,643 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:32:53] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-08 18:33:02,635 - werkzeug - INFO - 192.168.201.2 - - [08/Dec/2018 18:33:02] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 04:13:18,410 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-09 04:13:18,411 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 04:13:38,836 - flask.app - ERROR - Exception on /v1/models/gpu-res-jpg1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f06e693d0f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f06e693d0f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./gate.py", line 145, in v1_predict
+    res = requests.post(url, files=files)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8500): Max retries exceeded with url: /v1/tasks/gpu-res-jpg1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f06e693d0f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-09 04:13:38,839 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 04:13:38] "[1m[35mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 500 -
+2018-12-09 05:57:21,896 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 05:57:21] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:01:01,262 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:01:01] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:04:45,598 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:04:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:05:37,517 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:05:37] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:09:13,403 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:09:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:23,451 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:26,131 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:26] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:28,337 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:28] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:35,212 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:35] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:38,125 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:38] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:41,058 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:10:44,177 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:10:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:11:46,436 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:11:46] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:12:26,249 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:12:26] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:13:29,746 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:13:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:14:19,006 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:14:19] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:14:33,085 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:14:33] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:18:35,956 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:18:35] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:18:43,468 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:18:43] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:18:48,649 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:18:48] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:19:30,321 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:19:30] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:19:33,274 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:19:33] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:19:37,175 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:19:37] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:19:40,642 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:19:40] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:19:44,314 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:19:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:19:47,749 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:19:47] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:23:22,181 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:23:22] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:23:43,472 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:23:43] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:25:10,648 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:25:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:25:47,655 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:25:47] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:26:33,607 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:26:33] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:26:37,171 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:26:37] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:26:41,161 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:26:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:26:49,351 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:26:49] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:12,564 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:15,503 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:15] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:29,511 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:32,949 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:32] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:41,452 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:41] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:44,211 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:44] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:27:47,570 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:27:47] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:28:18,320 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:28:18] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:28:24,878 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:28:24] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:28:45,769 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:28:45] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 06:29:01,673 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:29:01] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:29:06,347 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:29:06] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:29:12,019 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:29:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:29:17,451 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:29:17] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:29:24,245 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:29:24] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:41:09,255 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:41:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 06:41:39,617 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 06:41:39] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:31:50,000 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-09 07:31:50,001 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 07:51:46,691 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:51:46] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:09,720 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:11,988 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:11] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:13,334 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:14,569 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:15,748 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:15] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:17,179 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:17] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:18,392 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:18] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:19,661 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:19] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:20,915 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:20] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:22,048 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:22] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:23,197 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:23] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:24,244 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:24] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:25,423 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:25] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:26,772 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:26] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:27,930 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:27] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:29,166 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:52:51,663 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:51] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:52:52,352 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:52] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:52:52,958 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:52] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:52:53,435 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:53] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:52:53,859 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:53] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:52:54,348 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:52:54] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:53:01,197 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:01] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:53:01,928 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:01] "[1m[31mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 406 -
+2018-12-09 07:53:06,144 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:06] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:06,870 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:06] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:07,356 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:07] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:07,838 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:07] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:08,247 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:08] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:08,651 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:08] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:09,063 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:09,417 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:09,812 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:10,145 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:10,460 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:12,952 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:13,447 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:13,972 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:13] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:14,439 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:14,935 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:14] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:15,437 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:15] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:15,949 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:15] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:16,430 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:16] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:16,858 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:16] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:17,228 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:17] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:22,255 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:22] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:22,766 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:22] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:23,220 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:23] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:23,695 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:23] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:24,319 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:24] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:24,818 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:24] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:25,493 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:25] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:26,290 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:26] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:26,691 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:26] "[37mPOST /v1/models/gpu-res-jpg2 HTTP/1.1[0m" 200 -
+2018-12-09 07:53:34,210 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:34] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:34,720 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:34] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:35,217 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:35] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:35,685 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:35] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:36,117 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:36] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:36,999 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:36] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:54,951 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:54] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:55,284 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:55] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:55,755 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:55] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:56,202 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:56] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:56,555 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:56] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:56,857 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:56] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:58,090 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:58] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:58,599 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:58] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:59,060 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:59] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:59,525 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:59] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:53:59,976 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:53:59] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:00,416 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:00] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:00,789 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:00] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:01,288 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:01] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:01,835 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:01] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:02,350 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:02] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:02,760 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:02] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:03,137 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:03] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:03,448 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:03] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:03,926 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:03] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:04,240 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:04] "[37mPOST /v1/models/cpu-res-jpg HTTP/1.1[0m" 200 -
+2018-12-09 07:54:08,079 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:08] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:54:09,038 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:54:09,982 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:09] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:54:10,939 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:54:10] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:55:24,620 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:55:24] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:55:25,742 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:55:25] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:55:26,981 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:55:26] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:55:27,948 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:55:27] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:55:29,020 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:55:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:55:58,553 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:55:58] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:57:58,114 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:57:58] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 07:58:31,032 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 07:58:31] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 08:00:00,572 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 08:00:00] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 08:00:25,885 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 08:00:25] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 08:00:45,327 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 08:00:45] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 08:00:56,111 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 08:00:56] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 08:01:29,946 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 08:01:29] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 08:03:49,144 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 08:03:49] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 11:32:31,002 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 11:32:31] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 11:32:52,264 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 11:32:52] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 11:33:01,336 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 11:33:01] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 11:34:03,611 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 11:34:03] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 11:38:34,846 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 11:38:34] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 11:40:04,005 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 11:40:04,060 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 11:42:12,530 - werkzeug - INFO - 192.168.201.2 - - [09/Dec/2018 11:42:12] "[37mPOST /v1/models/gpu-res-jpg1 HTTP/1.1[0m" 200 -
+2018-12-09 12:03:37,870 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:03:37,917 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:04:09,757 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:04:09,794 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:04:23,374 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:04:23,416 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:22,396 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:06:22,440 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:26,870 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:06:26,904 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:28,260 - werkzeug - INFO -  * Running on http://0.0.0.0:8502/ (Press CTRL+C to quit)
+2018-12-09 12:06:28,261 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:37,742 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:06:37,782 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:38,447 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:06:38,489 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:52,048 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:06:52,080 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:06:52,368 - werkzeug - INFO -  * Detected change in '/notebooks/vol/api-v3/gate/gate.py', reloading
+2018-12-09 12:06:52,399 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:08:05,989 - werkzeug - INFO -  * Running on http://0.0.0.0:8501/ (Press CTRL+C to quit)
+2018-12-09 12:08:05,990 - werkzeug - INFO -  * Restarting with stat
+2018-12-09 12:08:48,545 - werkzeug - INFO -  * Running on http://0.0.0.0:8502/ (Press CTRL+C to quit)
+2018-12-09 12:08:48,546 - werkzeug - INFO -  * Restarting with stat

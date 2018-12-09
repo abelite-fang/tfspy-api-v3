@@ -1,1 +1,4 @@
-[{"name": "resnet", "base_path": "/notebooks/train-data/ResNet-50v2", "model_platform": "tensorflow", "version": "1538687196"},{"name": "joking", "base_path": "/notebooks/train-data/ResNet-50v2", "model_platform": "tensorflow", "version": "1538687370"},{"name": "cpu-res-jpg", "base_path": "/notebooks/train-data/ResNet-50v2", "model_platform": "tensorflow", "version": "1538687457"}]
+[{"name": "cpu-res-jpg", "base_path": "/notebooks/vol/api-v3/service/gpu/models/cpu-res-jpg", "model_platform": "tensorflow", "version": "1538687457"},
+{"name": "gpu-res-jpg1", "base_path": "/notebooks/vol/api-v3/service/gpu/models/gpu-res-jpg1","model_platform": "tensorflow"},
+{"name": "gpu-res-jpg2", "base_path": "/notebooks/vol/api-v3/service/gpu/models/gpu-res-jpg2","model_platform": "tensorflow"}]
+

@@ -1,0 +1,113 @@
+{
+    "model_spec": {
+        "name": "gpu-res-jpg1",
+        "signature_name": "",
+        "version": "1538687370"
+    },
+    "metadata": {
+        "signature_def": {
+            "signature_def": {
+                "predict": {
+                    "inputs": {
+                        "image_bytes": {
+                            "dtype": "DT_STRING",
+                            "tensor_shape": {
+                                "dim": [
+                                    {
+                                        "size": "-1",
+                                        "name": ""
+                                    }
+                                ],
+                                "unknown_rank": false
+                            },
+                            "name": "input_tensor:0"
+                        }
+                    },
+                    "outputs": {
+                        "probabilities": {
+                            "dtype": "DT_FLOAT",
+                            "tensor_shape": {
+                                "dim": [
+                                    {
+                                        "size": "-1",
+                                        "name": ""
+                                    },
+                                    {
+                                        "size": "1001",
+                                        "name": ""
+                                    }
+                                ],
+                                "unknown_rank": false
+                            },
+                            "name": "softmax_tensor:0"
+                        },
+                        "classes": {
+                            "dtype": "DT_INT64",
+                            "tensor_shape": {
+                                "dim": [
+                                    {
+                                        "size": "-1",
+                                        "name": ""
+                                    }
+                                ],
+                                "unknown_rank": false
+                            },
+                            "name": "ArgMax:0"
+                        }
+                    },
+                    "method_name": "tensorflow/serving/predict"
+                },
+                "serving_default": {
+                    "inputs": {
+                        "image_bytes": {
+                            "dtype": "DT_STRING",
+                            "tensor_shape": {
+                                "dim": [
+                                    {
+                                        "size": "-1",
+                                        "name": ""
+                                    }
+                                ],
+                                "unknown_rank": false
+                            },
+                            "name": "input_tensor:0"
+                        }
+                    },
+                    "outputs": {
+                        "probabilities": {
+                            "dtype": "DT_FLOAT",
+                            "tensor_shape": {
+                                "dim": [
+                                    {
+                                        "size": "-1",
+                                        "name": ""
+                                    },
+                                    {
+                                        "size": "1001",
+                                        "name": ""
+                                    }
+                                ],
+                                "unknown_rank": false
+                            },
+                            "name": "softmax_tensor:0"
+                        },
+                        "classes": {
+                            "dtype": "DT_INT64",
+                            "tensor_shape": {
+                                "dim": [
+                                    {
+                                        "size": "-1",
+                                        "name": ""
+                                    }
+                                ],
+                                "unknown_rank": false
+                            },
+                            "name": "ArgMax:0"
+                        }
+                    },
+                    "method_name": "tensorflow/serving/predict"
+                }
+            }
+        }
+    }
+}

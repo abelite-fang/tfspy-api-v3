@@ -7,18 +7,21 @@ import logging
 import argparse
 import datetime
 import tensorflow as tf
+import numpy
 from flask import Flask, jsonify, request, redirect
 from werkzeug import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
-from gpu.run import *
+#from gpu.tf1 import *
+from gpu import tf1
+from gpu import tf2
 
 
-tfinfer = tf_inference()
+tfinfer = tf1.tf_inference(1, 2)
+tfinfer2 = tf2.tf_inference()
 
 # Global
 app = Flask(__name__)
 scheduler = BackgroundScheduler()
-
 
 
 ### Functions
@@ -27,7 +30,7 @@ def update_reg():
 	#print('update_reg hit')
 	global app
 	now = datetime.datetime.now()
-	print(now)
+	#print(now)
 	pass
 scheduler.add_job(update_reg, 'interval', minutes=1)
 scheduler.start()
@@ -38,17 +41,21 @@ scheduler.start()
 def hello():
 	return jsonify({'messages':'hello'})
 	pass
-@app.route('/v1/tasks', methods=['POST'])
-def taskin():
+@app.route('/v1/tasks/<modelName>', methods=['POST'])
+def taskin(modelName):
 	#request.files
-	print(request.data)
-	print(request.form)
-	print(request.files)
+	#print('taskin 1')
+	#print(request.data)
+	#print(request.form)
+	#print(request.files)
 
-	print('taskin')#request.files
-	re = tfinfer.infer('cpu-res-jpg', request.files)
-	return jsonify({'message':re})
-
+	#print('taskin 2')#request.files
+	re = tfinfer.infer(modelName, request.files)
+	#print("rerererer")
+	#print(type(re))
+	#print(re)
+	#return jsonify({'message':re})
+	return json.dumps(re)
 
 
 @app.route('/v1/healthcheck', methods=['GET'])
@@ -73,9 +80,9 @@ if __name__ == "__main__":
 		default='0.0.0.0')
 	parser.add_argument('-p', '--port',
 		help="Host running port, default=8500",
-		type=str,
+		type=int,
 		nargs=1,
-		default='8500')
+		default=8500)
 	parser.add_argument('-f','--file',
 		help="Config file saved location, default=config.txt",
 		type=str,
@@ -98,5 +105,8 @@ if __name__ == "__main__":
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
-
-	app.run(host=parsed.host, port=parsed.port, debug=True)
+	print(parsed.port)
+	print(type(parsed.port))
+	if isinstance(parsed.port, list):
+		parsed.port = int(parsed.port[0])
+	app.run(host=parsed.host, port=parsed.port, debug=False)
