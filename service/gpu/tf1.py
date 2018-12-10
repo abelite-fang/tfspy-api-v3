@@ -27,11 +27,11 @@ class tf_inference():
 				except:
 					dirs = os.listdir(models['base_path'])
 					dirs.sort()
-					print(dirs[-1])
-					print(type(dirs[-1]))
+					#print(dirs[-1])
+					#print(type(dirs[-1]))
 					version = int(float(dirs[-1]))
 				path = models['base_path'] + '/' + str(version)
-				print('modelpath = ', path)
+				#print('modelpath = ', path)
 				keys = dict()
 				input_key = []
 				output_key = []
@@ -42,14 +42,19 @@ class tf_inference():
 				keys['output'] = output_key
 				keys['path'] = path
 				keys['version'] = int(float(version))
-				print('keys = ', keys)
-				print('models = ', models['name'])
+				#print('keys = ', keys)
+				#print('models = ', models['name'])
 				self.modelConfigs[models['name']] = keys
 					
 				meta_graph_def = tf.saved_model.load(self.sess,['serve'],path)
 				self.meta_graph_defss[models['name']] = meta_graph_def
 		
 	def __init__(self, memory, device):
+		nvmlInit()
+		deviceCount = nvmlDeviceGetCount()
+		print("deviceCount = ", deviceCount)
+		
+		
 		self.gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.45)
 		self.config=tf.ConfigProto(log_device_placement=False,gpu_options=self.gpu_options)
 		self.sess = tf.Session(graph=tf.Graph(), config=self.config)
@@ -65,9 +70,6 @@ class tf_inference():
 		
 
 
-		nvmlInit()
-		deviceCount = nvmlDeviceGetCount()
-		print("deviceCount = ", deviceCount)
 		# do thread
 	def config_model(self,modelName):
 		with open('config.json', 'rt') as f:
