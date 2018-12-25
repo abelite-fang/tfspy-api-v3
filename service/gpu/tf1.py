@@ -12,6 +12,7 @@ import datetime
 import gpu_utils
 import threading
 import tensorflow as tf
+from tensorflow.python.platform import gfile
 from pynvml import *
 PATH = os.path.dirname(os.path.abspath(__file__)) + '/models/'
 
@@ -27,10 +28,17 @@ class tf_inference():
 				except:
 					dirs = os.listdir(models['base_path'])
 					dirs.sort()
-					#print(dirs[-1])
-					#print(type(dirs[-1]))
 					version = int(float(dirs[-1]))
 				path = models['base_path'] + '/' + str(version)
+				pb_file = path + "/saved_model.pb"
+				#with gfile.FastGFile(pb_file, 'rb') as pb:
+				print(pb_file)
+				with open(pb_file, 'rb') as pb:
+					graph_def = tf.GraphDef()
+					graph_def.ParseFromString(pb.read())
+					print("-" * 30)
+					print(graph_def)
+					print("-" * 30)
 				#print('modelpath = ', path)
 				keys = dict()
 				input_key = []
@@ -45,18 +53,38 @@ class tf_inference():
 				#print('keys = ', keys)
 				#print('models = ', models['name'])
 				self.modelConfigs[models['name']] = keys
-					
+				#with tf.device(	
 				meta_graph_def = tf.saved_model.load(self.sess,['serve'],path)
 				self.meta_graph_defss[models['name']] = meta_graph_def
 		
-	def __init__(self, memory, device):
+	def __init__(self, memory):
 		nvmlInit()
+		self.freeGPU = []
+		try:
+			nvmlDeviceGetCount()
+		except NVMLError as error:
+			print(error)
 		deviceCount = nvmlDeviceGetCount()
+		## DO THREAD HERE
+
 		print("deviceCount = ", deviceCount)
-		
-		
-		self.gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.45)
-		self.config=tf.ConfigProto(log_device_placement=False,gpu_options=self.gpu_options)
+		for i in range(deviceCount):
+			handle = nvmlDeviceGetHandleByIndex(i)
+			#aa = nvmlDeviceGetPciInfo(handle)
+			#print(aa)
+			mem = nvmlDeviceGetMemoryInfo(handle)
+			print(mem.free/mem.total)
+			if (mem.free/mem.total) >= 0.5:
+				self.freeGPU.append(i)
+
+		os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+		if self.freeGPU != '':
+			os.environ["CUDA_VISIBLE_DEVICES"]=str(self.freeGPU[0])
+			print(self.freeGPU[0])
+
+		self.gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=memory*0.9)
+		#self.config=tf.ConfigProto(log_device_placement=False,gpu_options=self.gpu_options)
+		self.config=tf.ConfigProto(log_device_placement=False)
 		self.sess = tf.Session(graph=tf.Graph(), config=self.config)
 		
 		self.meta_graph_defss = dict()
@@ -67,10 +95,7 @@ class tf_inference():
 		self.output_key = []
 		self.output_key.append('probabilities')
 		self.output_key.append('classes')
-		
 
-
-		# do thread
 	def config_model(self,modelName):
 		with open('config.json', 'rt') as f:
 			path = ""

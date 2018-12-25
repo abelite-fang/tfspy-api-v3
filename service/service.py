@@ -16,7 +16,7 @@ from gpu import tf1
 from gpu import tf2
 
 
-tfinfer = tf1.tf_inference(1, 2)
+tfinfer = tf1.tf_inference(0.3)
 tfinfer2 = tf2.tf_inference()
 
 # Global
@@ -90,7 +90,7 @@ if __name__ == "__main__":
 		default='config.txt')
 	parsed, unparsed = parser.parse_known_args()
 	configFile = os.path.abspath(parsed.file[0])
-	app.debug = True
+	#app.debug = True
 
 	# Set Logs 
 	formatter = logging.Formatter(
@@ -105,8 +105,8 @@ if __name__ == "__main__":
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
-	print(parsed.port)
-	print(type(parsed.port))
+	#print(parsed.port)
+	#print(type(parsed.port))
 	if isinstance(parsed.port, list):
 		parsed.port = int(parsed.port[0])
 	app.run(host=parsed.host, port=parsed.port, debug=False)
