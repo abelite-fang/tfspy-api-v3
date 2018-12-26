@@ -9,8 +9,7 @@ import json
 import numpy
 import base64
 import datetime
-import tensorflow as tf
-from tensorflow.python.platform import gfile
+
 
 try:
     import gpu_utils
@@ -19,16 +18,15 @@ except:
     print("no gpu_utils")
     gpu_exist = 0
 
-
+import threading
+import tensorflow as tf
+from tensorflow.python.platform import gfile
 try:
     from pynvml import *
 except:
     print("no pynvml")
 
-
-Workable = 1
 PATH = os.path.dirname(os.path.abspath(__file__)) + '/models/'
-
 
 class tf_inference():
 	def readConfig(self):
@@ -53,8 +51,8 @@ class tf_inference():
 					print("-" * 30)
 					print(graph_def)
 					print("-" * 30)
-				
-                keys = dict()
+				#print('modelpath = ', path)
+				keys = dict()
 				input_key = []
 				output_key = []
 				input_key.append('image_bytes')
@@ -70,9 +68,8 @@ class tf_inference():
 				#with tf.device(	
 				meta_graph_def = tf.saved_model.load(self.sess,['serve'],path)
 				self.meta_graph_defss[models['name']] = meta_graph_def
-	
-
-    def detect_gpu(self):
+		
+	def __init__(self, memory):
 		nvmlInit()
 		self.freeGPU = []
 		try:
@@ -80,35 +77,31 @@ class tf_inference():
 		except NVMLError as error:
 			print(error)
 		deviceCount = nvmlDeviceGetCount()
+		## DO THREAD HERE
 
 		print("deviceCount = ", deviceCount)
 		for i in range(deviceCount):
 			handle = nvmlDeviceGetHandleByIndex(i)
+			#aa = nvmlDeviceGetPciInfo(handle)
+			#print(aa)
 			mem = nvmlDeviceGetMemoryInfo(handle)
 			print(mem.free/mem.total)
 			if (mem.free/mem.total) >= 0.5:
 				self.freeGPU.append(i)
-        
+
 		os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 		if self.freeGPU != '':
 			os.environ["CUDA_VISIBLE_DEVICES"]=str(self.freeGPU[0])
 			print(self.freeGPU[0])
-       
+
 		self.gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=memory*0.9)
-
-
-
-	def __init__(self, memory):
-        
-        self.detect_gpu() # self Func
-
+		#self.config=tf.ConfigProto(log_device_placement=False,gpu_options=self.gpu_options)
 		self.config=tf.ConfigProto(log_device_placement=False)
 		self.sess = tf.Session(graph=tf.Graph(), config=self.config)
 		
 		self.meta_graph_defss = dict()
 		self.modelConfigs = dict()
-		self.readConfig()  # self Func
-    
+		self.readConfig()
 		self.signature_key = 'predict'
 		self.input_key = 'image_bytes'
 		self.output_key = []
@@ -134,29 +127,73 @@ class tf_inference():
 						serialNumber = int(float(l[-1]))
 					path = name['base_path']
 		return serialNumber
-	
-    def deeper(self, path, listofInference, modelName):
-		global Workable
-        Workable = 0
-        signature = self.meta_graph_defss[modelName].signature_def
+	#def change_model(self, path, x[], y[])
+	def deeper(self, path, listofInference, modelName):
+		#a = datetime.datetime.now()
+		#print('a = ', a)
+		#meta_graph_def = tf.saved_model.load(self.sess,['serve'],path)
+		
+		#a1 = datetime.datetime.now()
+		#print('a->a1 = ', a1-a)
+		#signature = meta_graph_def.signature_def
+		signature = self.meta_graph_defss[modelName].signature_def
+		#print(self.signature_key)
+		#a2 = datetime.datetime.now()
+		#print('a1->a2 = ', a2-a1)
 		x_tensor_name = signature[self.signature_key].inputs[self.input_key].name
+		
+		#a3 = datetime.datetime.now()
+		#b = datetime.datetime.now()
+		#print('a3->b = ', b-a3)
+		#print('a->b = ', b-a)
 		y = []
 		y_tensor_name = []
 		y_tensor_name.append(signature[self.signature_key].outputs[self.output_key[0]].name)
 		y_tensor_name.append(signature[self.signature_key].outputs[self.output_key[1]].name)
+		#c = datetime.datetime.now()
+		#print('b->c = ', c-b)
+		#y2_tensor_name = signature[self.signature_key].outputs[self.output_key2].name
+		#print(x_tensor_name)
+		#print(y1_tensor_name)
+		#print(y2_tensor_name)
 		x = self.sess.graph.get_tensor_by_name(x_tensor_name)
 
+		#d = datetime.datetime.now()
+		#print('c->d = ', d-c)
 		y.append(self.sess.graph.get_tensor_by_name(y_tensor_name[0]))
 		y.append(self.sess.graph.get_tensor_by_name(y_tensor_name[1]))
 		
-		output = []
-    
-		for l in listofInference.getlist('file'):
-			data = l.stream.read()
+		#e = datetime.datetime.now()
+		#print('d->e = ', e-d)
+		#y1 = self.sess.graph.get_tensor_by_name(y1_tensor_name)
+		#y2 = self.sess.graph.get_tensor_by_name(y2_tensor_name)
+		#print(listofInference.getlist('file'))
 
+		output = []
+		#f = datetime.datetime.now()
+		#print('e->f = ', f-e)
+		for l in listofInference.getlist('file'):
+			#print(l)
+			#t1 = datetime.datetime.now()
+			#print('f->t1 = ', f-t1)
+			data = l.stream.read()
+			#t2 = datetime.datetime.now()
+			#print('t1->t2 = ', t2-t1)
+			
+			#_x = tf.convert_to_tensor(l.stream.read(), dtype=tf.string)
+			#_x = tf.image.decode_image(l.stream.read())
+			#_x = tf.decode_base64(data)
+			#_x = str(data) 
+			#_x = tf.constant(data)
+			#_x = str(base64.b64encode(l.stream.read()))
+
+			#a, b = self.sess.run( [y1,y2] , feed_dict={x:(data,)})
 			c = self.sess.run( y , feed_dict={x:(data,)})
 			
-            for i in range(len(c)):
+			#t3 = datetime.datetime.now()
+			#print('t2->t3 = ', t3-t2)
+			for i in range(len(c)):
+				#if i != 0:
 				if isinstance(c[i][0], numpy.ndarray):
 					output.append( { self.output_key[i]: c[i][0].tolist()} )	
 				elif isinstance(c[i][0], numpy.int64):
@@ -166,7 +203,8 @@ class tf_inference():
 					output.append( { self.output_key[i]: c[i][0]} )	
 			
 			tf.reset_default_graph()
-        Workable = 1
+			#t4 = datetime.datetime.now()
+			#print('t3->t4 = ', t4-t3)
 		return output
 
 

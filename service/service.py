@@ -16,21 +16,17 @@ from gpu import tf1
 from gpu import tf2
 
 
-tfinfer = tf1.tf_inference(0.3)
-tfinfer2 = tf2.tf_inference()
+tf_inference = tf1.tf_inference(0.3)
 
 # Global
 app = Flask(__name__)
 scheduler = BackgroundScheduler()
 
-
 ### Functions
 # Call Registry for Updating Config
 def update_reg():
-	#print('update_reg hit')
 	global app
 	now = datetime.datetime.now()
-	#print(now)
 	pass
 scheduler.add_job(update_reg, 'interval', minutes=1)
 scheduler.start()
@@ -41,6 +37,9 @@ scheduler.start()
 def hello():
 	return jsonify({'messages':'hello'})
 	pass
+
+
+
 @app.route('/v1/tasks/<modelName>', methods=['POST'])
 def taskin(modelName):
 	#request.files
@@ -50,7 +49,7 @@ def taskin(modelName):
 	#print(request.files)
 
 	#print('taskin 2')#request.files
-	re = tfinfer.infer(modelName, request.files)
+	re = tf_inference.infer(modelName, request.files)
 	#print("rerererer")
 	#print(type(re))
 	#print(re)

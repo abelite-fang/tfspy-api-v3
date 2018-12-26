@@ -242,7 +242,7 @@ if __name__ == "__main__":
 	if not os.path.exists(save_location):
 		os.makedirs(save_location)
 
-
+    
 	# Set Logs 
 	#formatter = logging.Formatter(
 	#	"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
