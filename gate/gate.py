@@ -70,9 +70,6 @@ def upload_record(uid, files, createTime, modelName):
 				#print(record)
 				f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 				f.write("," + "\n")
-	#print('-----upload_record------')
-	#print(resp)
-	#print('------------------------')
 	return resp
 
 
@@ -97,7 +94,11 @@ def save_file(files):
 		# Return a UUID as the taskID
 	return spid  
 
-
+def service_list_available():
+	resp = requests.get('http://localhost:8502/v1/check')
+	sendto = json.loads(resp.text)['sendto']
+	#print("sendto =", sendto)
+	return sendto
 
 
 
@@ -131,7 +132,14 @@ def v1_predict(modelName):
 				datetime.timezone(datetime.timedelta(hours=8)))
 		content = request.json
 		resp = upload_record(spid, request.files, createTime, modelName)
-		url = 'http://localhost:8500/v1/tasks/' + modelName
+		
+		url = service_list_available()
+		while url == '0':
+			#print('no service available now')
+			#time.sleep(1)
+			url = service_list_available()
+		url = url + '/v1/tasks/' + modelName
+		# url = 'http://localhost:8500/v1/tasks/' + modelName
 		files = []
 		for l in resp:
 			loca = save_location+'/'+str(spid)+'/'+l['file_name']
@@ -141,14 +149,14 @@ def v1_predict(modelName):
 		if res.status_code == 200:
 			print('return@ ', datetime.datetime.now())
 			return res.text
-		return jsonify({"messages":"error at get answer from service"})
+		return jsonify({"messages":"error when receive from service"})
 		# send()
 		#return jsonify({ modelName:modelName, 'UUID':spid})
 		
 		print('c = ', datetime.datetime.now())
 		return res.text
-
-	elif request.method == 'GET':
+	else:
+	#elif request.method == 'GET':
 		if 'id' not in request.headers:
 			msg = "{'error':'no ID for request', 'usage':'Please add ID: file_id or task_id in the header'}"
 			code = 406
@@ -156,11 +164,11 @@ def v1_predict(modelName):
 		print(request.headers.get('id'))
 		# Client GET result.
 
-		pass
 #	elif action == 'report' and request.method == 'GET':
 #		print("-d Report")
 #		# Dev Use
 #		pass
+	'''
 	else:
 		# Wrong Methods or Actions.
 		msg = "{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}"
@@ -169,7 +177,7 @@ def v1_predict(modelName):
 		
 	# For Now
 	return jsonify({modelName:action})
-
+	'''
 
 
 
@@ -189,9 +197,6 @@ def v1_gpu(UUID):
 #----------------------------------------------------------
 #|		    Debug / Dev Function		  |
 #----------------------------------------------------------
-#@app.route('/v1/dev/help')
-#def dev_help():
-#	return jsonify({'help':'POST /dev/'})
 
 @app.route('/v1/help')
 def client_help():
@@ -220,7 +225,6 @@ if __name__ == "__main__":
 
 	parser = argparse.ArgumentParser(
 		description="API Gate of Self Designed Inference Service",
-		epilog='Developed by Wei Cheng \'dyingapple\' Fang')
 	parser.add_argument('--host',
 		help="Host running IP, default=0.0.0.0",
 		type=str,
@@ -248,7 +252,11 @@ if __name__ == "__main__":
 	#	"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
 	formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 	
-	handler = logging.FileHandler('gate.log', encoding='UTF-8')
+	directory = "log"
+	if not os.path.exists(directory):
+		os.makedirs(directory)
+
+	handler = logging.FileHandler('log/gate.log', encoding='UTF-8')
 	handler.setLevel(logging.DEBUG)
 	handler.setFormatter(formatter)
 	log = logging.getLogger('werkzeug')

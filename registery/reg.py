@@ -11,11 +11,29 @@ import datetime
 import requests
 from flask import Flask, jsonify, request, redirect, Response
 from werkzeug import secure_filename
-#from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 
 
 save_location = '0'
 app = Flask(__name__)
+scheduler = BackgroundScheduler()
+
+service_list = ['http://localhost:8500']
+
+def update_healthcheck():
+	global app, service_list
+	now = datetime.datetime.now()
+	for hosts in service_list:
+		url = hosts + '/v1/available'
+		print(url)
+		resp = requests.get(url)
+		print(resp.text)
+		print(resp.elapsed.total_seconds())
+	pass
+scheduler.add_job(update_healthcheck, 'interval', seconds=5 )
+scheduler.start()
+
+
 
 @app.route('/v1/config', methods=['GET'])
 def config_response():
@@ -25,7 +43,23 @@ def config_response():
 		print(data)
 	return jsonify(data)
 
-
+@app.route('/v1/check', methods=['GET'])
+def health_response():
+	global service_list
+	now = datetime.datetime.now()
+	for hosts in service_list:
+		url = hosts + '/v1/available'
+		print(url)
+		try: 
+			resp = requests.get(url)
+		except:
+			continue
+		print(resp.text)
+		print(resp.elapsed.total_seconds())
+		workable = json.loads(resp.text)['workable']
+		if workable == 1:
+			return jsonify({'sendto':hosts})
+	return jsonify({'sendto':"0"})
 
 
 
@@ -37,7 +71,6 @@ if __name__ == "__main__":
 
 	parser = argparse.ArgumentParser(
 		description="Reg",
-		epilog='Developed by Wei Cheng \'dyingapple\' Fang')
 	parser.add_argument('--host',
 		help="Host running IP, default=0.0.0.0",
 		type=str,
@@ -61,6 +94,9 @@ if __name__ == "__main__":
 
 
 	# Set Logs 
+	directory = 'log'
+	if not os.path.exists(directory):
+		os.makedirs(directory)
 	formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 	
 	handler = logging.FileHandler('reg.log', encoding='UTF-8')
@@ -74,4 +110,4 @@ if __name__ == "__main__":
 
 	app.secret_key = 'v3superkey'
 	app.config['SESSION_TYPE'] = 'filesystem'
-	app.run(host=parsed.host, port=parsed.port, debug=True, use_reloader=True)
+	app.run(host=parsed.host, port=parsed.port, debug=False, use_reloader=False)

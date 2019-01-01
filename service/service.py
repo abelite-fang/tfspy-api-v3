@@ -13,7 +13,6 @@ from werkzeug import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
 #from gpu.tf1 import *
 from gpu import tf1
-from gpu import tf2
 
 
 tf_inference = tf1.tf_inference(0.3)
@@ -42,28 +41,27 @@ def hello():
 
 @app.route('/v1/tasks/<modelName>', methods=['POST'])
 def taskin(modelName):
-	#request.files
-	#print('taskin 1')
-	#print(request.data)
-	#print(request.form)
-	#print(request.files)
-
-	#print('taskin 2')#request.files
+	tf_inference.off()
 	re = tf_inference.infer(modelName, request.files)
-	#print("rerererer")
-	#print(type(re))
-	#print(re)
-	#return jsonify({'message':re})
+	tf_inference.on()
 	return json.dumps(re)
 
 
-@app.route('/v1/healthcheck', methods=['GET'])
-def healthcheck():
-	return jsonify({'messages':'ssss'})
 
 
+@app.route('/v1/available', methods=['GET'])
+def	healthcheck(): 
+#	print("tf1 Workable = ", tf_inference.Workable)
+	return jsonify({'workable':tf_inference.workable()})
 
 
+@app.route('/v1/on')
+def on():
+	return jsonify({'workable': tf_inference.on()})
+
+@app.route('/v1/off')
+def off():
+	return jsonify({'workable': tf_inference.off()})
 
 #----------------------------------------------------------
 #|			Initialize			  |
@@ -71,7 +69,6 @@ def healthcheck():
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(
 		description="Inference Service",
-		epilog='Developed by Wei Cheng \'dyingapple\' Fang')
 	parser.add_argument('--host',
 		help="Host running IP, default=0.0.0.0",
 		type=str,
@@ -92,9 +89,12 @@ if __name__ == "__main__":
 	#app.debug = True
 
 	# Set Logs 
+	directory = 'log'
+	if not os.path.exists(directory):
+		os.makedirs(directory)
 	formatter = logging.Formatter(
 		"[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
-	handler = logging.FileHandler('service.log', encoding='UTF-8')
+	handler = logging.FileHandler('log/service.log', encoding='UTF-8')
 	handler.setLevel(logging.DEBUG)
 	handler.setFormatter(formatter)
 	log = logging.getLogger('werkzeug')

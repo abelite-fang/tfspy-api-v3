@@ -11,6 +11,8 @@ import base64
 import datetime
 import tensorflow as tf
 from tensorflow.python.platform import gfile
+from tensorflow.core.protobuf import saved_model_pb2
+from tensorflow.python.util import compat
 
 try:
     import gpu_utils
@@ -21,12 +23,13 @@ except:
 
 
 try:
-    from pynvml import *
+		from pynvml import *
+		use_pynvml = 1
 except:
-    print("no pynvml")
+		use_pynvml = 0
+		print("no pynvml")
 
 
-Workable = 1
 PATH = os.path.dirname(os.path.abspath(__file__)) + '/models/'
 
 
@@ -34,27 +37,61 @@ class tf_inference():
 	def readConfig(self):
 		global PATH
 		with open('config.json', 'rt') as f:
+			print('file config.json loading')
 			js = json.load(f)
+			print('json load = ')
+			print(js)
 			version = 0
 			for models in js:
 				try: 
 					version = models['version']
+					print('get model version from json file, version:', version)
 				except:
 					dirs = os.listdir(models['base_path'])
 					dirs.sort()
 					version = int(float(dirs[-1]))
+					print('no version info in file, get from dirctory sturcture, version:', version)
 				path = models['base_path'] + '/' + str(version)
 				pb_file = path + "/saved_model.pb"
 				#with gfile.FastGFile(pb_file, 'rb') as pb:
 				print(pb_file)
-				with open(pb_file, 'rb') as pb:
-					graph_def = tf.GraphDef()
-					graph_def.ParseFromString(pb.read())
-					print("-" * 30)
-					print(graph_def)
-					print("-" * 30)
-				
-                keys = dict()
+				with gfile.FastGFile(pb_file, 'rb') as pb:
+					data = compat.as_bytes(pb.read())
+					sm = saved_model_pb2.SavedModel()
+					sm.ParseFromString(data)
+					print("("*30)
+					print(type(sm))
+				#	parsed = json.loads(str(sm))
+				#	print(parsed)
+				#	for i in sm.meta_graphs:
+				#		print("-" * 30)
+				#		print(i)
+				#	print(sm.meta_graphs)
+					try:
+						print(sm.meta_graphs[5])
+					except:
+						print("no 0")
+					print("\)" * 30)
+					try:
+						print(sm.meta_graphs[0].signature_def["predict"].inputs)
+					except:
+						print("no 1")
+					try:
+						print(sm.meta_graphs[0].signature_def["predict"])
+					except:
+						print("no 1")
+					pass
+				#	graph_def = tf.GraphDef()
+				#	print("&" * 30)
+				#	print(pb.read())
+				#	graph_def.ParseFromString(pb.read().strip())
+				#	graph_def.ParseFromString(pb.read())
+				#	print("-" * 30)
+				#	print(graph_def)
+				#	print("-" * 30)
+					
+
+				keys = dict()
 				input_key = []
 				output_key = []
 				input_key.append('image_bytes')
@@ -70,9 +107,10 @@ class tf_inference():
 				#with tf.device(	
 				meta_graph_def = tf.saved_model.load(self.sess,['serve'],path)
 				self.meta_graph_defss[models['name']] = meta_graph_def
-	
+				#print(type(meta_graph_def))
 
-    def detect_gpu(self):
+
+	def detect_gpu(self):
 		nvmlInit()
 		self.freeGPU = []
 		try:
@@ -88,7 +126,7 @@ class tf_inference():
 			print(mem.free/mem.total)
 			if (mem.free/mem.total) >= 0.5:
 				self.freeGPU.append(i)
-        
+
 		os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 		if self.freeGPU != '':
 			os.environ["CUDA_VISIBLE_DEVICES"]=str(self.freeGPU[0])
@@ -96,24 +134,37 @@ class tf_inference():
        
 		self.gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=memory*0.9)
 
+	def workable(self):
+		return self.Workable
+	def on(self):
+		self.Workable = 1
+		return self.Workable
+	def off(self):
+		self.Workable = 0
+		return self.Workable
 
 
 	def __init__(self, memory):
-        
-        self.detect_gpu() # self Func
-
+		self.Workable = 0
+		os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"]="python"
+		if use_pynvml:
+			self.detect_gpu() # self Func
 		self.config=tf.ConfigProto(log_device_placement=False)
 		self.sess = tf.Session(graph=tf.Graph(), config=self.config)
 		
 		self.meta_graph_defss = dict()
 		self.modelConfigs = dict()
-		self.readConfig()  # self Func
-    
+		# self Func
+		self.readConfig()
+
+
 		self.signature_key = 'predict'
 		self.input_key = 'image_bytes'
 		self.output_key = []
 		self.output_key.append('probabilities')
 		self.output_key.append('classes')
+		self.Workable = 1
+
 
 	def config_model(self,modelName):
 		with open('config.json', 'rt') as f:
@@ -135,10 +186,11 @@ class tf_inference():
 					path = name['base_path']
 		return serialNumber
 	
-    def deeper(self, path, listofInference, modelName):
+	def deeper(self, path, listofInference, modelName):
 		global Workable
-        Workable = 0
-        signature = self.meta_graph_defss[modelName].signature_def
+		self.Workable = 0
+		print(self.meta_graph_defss[modelName].signature_def)
+		signature = self.meta_graph_defss[modelName].signature_def
 		x_tensor_name = signature[self.signature_key].inputs[self.input_key].name
 		y = []
 		y_tensor_name = []
@@ -156,26 +208,28 @@ class tf_inference():
 
 			c = self.sess.run( y , feed_dict={x:(data,)})
 			
-            for i in range(len(c)):
+			for i in range(len(c)):
 				if isinstance(c[i][0], numpy.ndarray):
 					output.append( { self.output_key[i]: c[i][0].tolist()} )	
 				elif isinstance(c[i][0], numpy.int64):
 					#print(type(c[i][0].item()))
 					output.append( { self.output_key[i]: c[i][0].item()} )	
 				else:
-					output.append( { self.output_key[i]: c[i][0]} )	
+					output.append( { self.output_key[i]: c[i][0]} )
 			
 			tf.reset_default_graph()
-        Workable = 1
+		self.Workable = 1
 		return output
 
 
 	def infer(self, modelName, listofInference):
 		global PATH
+		self.Workable = 0
 		self.modelName = modelName
 		print(self.modelName)
 		serial = self.config_model(modelName)
 		path = PATH + modelName + '/' + str(serial)
 		re = self.deeper(path, listofInference, modelName)
+		print('inference return to service')
 		return re
 
