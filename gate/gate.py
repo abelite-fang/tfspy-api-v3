@@ -26,24 +26,16 @@ scheduler = BackgroundScheduler()
 
 
 
-### Functions
-# Call Registry for Updating Config
-def update_reg():
-	#print('update_reg hit')
-	global app
-	now = datetime.datetime.now()
-	#print(now)
-	pass
-scheduler.add_job(update_reg, 'interval', minutes=1)
-scheduler.start()
+# -------------------
+#      Functions
+# -------------------
 
 
 
-
-def upload_record(uid, files, createTime, modelName):
+def upload_record(taskID, files, createTime, modelName):
 	global save_location
 	record_file = save_location + "/record.json"
-	resp = []
+	record_list = []
 	init_dict = {}
 	'''
 	 Save metadata into two parts for client to dig
@@ -51,37 +43,44 @@ def upload_record(uid, files, createTime, modelName):
 	  2. File ID
 	'''
 	with open(record_file , 'a') as f:
-		init_dict['task'] = str(uid)
+		init_dict['task'] = str(taskID)
 		init_dict['time'] = str(createTime)
 		# If > one file, create id for each file_id, if only one -> file_id = task_id
 		if len(files.getlist("file")) == 1:
+			'''
+			One File,
+			FileID = TaskID
+			'''
 			record = init_dict.copy()
-			record['file_id'] = str(uid)
+			record['file_id'] = str(taskID)
 			record['file_name'] = files.getlist("file")[0].filename
-			resp.append(record)
+			record_list.append(record)
 			f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 			f.write("," + "\n")
 		else:
+			'''
+			Multiple Files,
+			FileID != TaskID
+			create new FileID for each
+			'''
 			for l in files.getlist("file"):
+				
 				record = init_dict.copy()
 				record['file_id'] = str(uuid.uuid4())
 				record['file_name'] = l.filename
-				resp.append(record)
+				record_list.append(record)
 				#print(record)
 				f.write(json.dumps(record, sort_keys=True, indent=2,separators=(',',':')))
 				f.write("," + "\n")
-	return resp
+	return record_list
 
 
 
 def save_file(files):
 	global save_location
-	#print(files)
-	#print('!' * 10)
 	tmp = files.getlist("file")
-	#print(tmp)
-	spid = uuid.uuid4()
-	directory = save_location + '/' + str(spid)
+	taskID = uuid.uuid4()
+	directory = save_location + '/' + str(taskID)
 	if os.path.exists(directory):
 		# Error: UUID Repeated
 		return 0
@@ -92,7 +91,7 @@ def save_file(files):
 		filename = secure_filename(l.filename)
 		l.save(os.path.join(directory, l.filename))
 		# Return a UUID as the taskID
-	return spid  
+	return taskID 
 
 def service_list_available():
 	resp = requests.get('http://localhost:8502/v1/check')
@@ -107,102 +106,74 @@ def service_list_available():
 #|		    Client <---> API Gate		  |
 #----------------------------------------------------------
 # Client <--> API Gate
-@app.route('/v1/models/<modelName>', methods=['GET','POST'])
+@app.route('/v1/models/<modelName>', methods=['GET','POST'], strict_slashes=False)
 def v1_predict(modelName):
 	global save_location
-	#print(save_location)
-	#print(request.method)
+
 	if request.method == 'POST':
-#		print("-d Predict")
 		if 'file' not in request.files:
 			msg = "{'error':'no file', 'usage':'Please add key:file value=file in the body of file=@filename from curl'}"
 			code = 406
 			return Response(msg, status=code, mimetype='application/json')
-		spid = save_file(request.files)
+		taskID = save_file(request.files)
 
-		if spid == 0:
+		if taskID == 0:
 			msg = "{'error':'uuid repeated or internal error, please try again'}"
 			code = 500
 			return Response(msg, status=code, mimetype='application/json')
-		
 
-		# set time to UTC+8
+		''' set time to UTC+8 '''
 		createTime = datetime.datetime.utcnow().replace(
 			tzinfo=datetime.timezone.utc).astimezone(
 				datetime.timezone(datetime.timedelta(hours=8)))
+
 		content = request.json
-		resp = upload_record(spid, request.files, createTime, modelName)
-		
+		record_list = upload_record(taskID, request.files, createTime, modelName)
+
 		url = service_list_available()
 		while url == '0':
-			#print('no service available now')
-			#time.sleep(1)
+			''' no available service '''
 			url = service_list_available()
 		url = url + '/v1/tasks/' + modelName
-		# url = 'http://localhost:8500/v1/tasks/' + modelName
+
 		files = []
-		for l in resp:
-			loca = save_location+'/'+str(spid)+'/'+l['file_name']
-			files.append( ('file',( l['file_id'], open(loca, 'rb'))) )
-		res = requests.post(url, files=files)
-		#print(res.text)
-		if res.status_code == 200:
+		for l in record_list:
+			file_location = save_location+'/'+str(taskID)+'/'+l['file_name']
+			files.append( ('file',( l['file_id'], open(file_location, 'rb'))) )
+		respond = requests.post(url, files=files)
+
+		if respond.status_code == 200:
+			''' return successfully '''
 			print('return@ ', datetime.datetime.now())
-			return res.text
+			return respond.text
 		return jsonify({"messages":"error when receive from service"})
-		# send()
-		#return jsonify({ modelName:modelName, 'UUID':spid})
-		
+
+		''' BUG!!!!! '''
 		print('c = ', datetime.datetime.now())
-		return res.text
+		return respond.text
+
 	else:
-	#elif request.method == 'GET':
-		if 'id' not in request.headers:
-			msg = "{'error':'no ID for request', 'usage':'Please add ID: file_id or task_id in the header'}"
-			code = 406
-			return Response(msg, status=code, mimetype='application/json')
-		print(request.headers.get('id'))
-		# Client GET result.
-
-#	elif action == 'report' and request.method == 'GET':
-#		print("-d Report")
-#		# Dev Use
-#		pass
-	'''
-	else:
-		# Wrong Methods or Actions.
-		msg = "{'error':'wrong action','action':'predict, result','method':'GET result, POST predict'}"
-		code = 500
-		return Response(msg, status=code, mimetype='application/json')
-		
-	# For Now
-	return jsonify({modelName:action})
-	'''
-
-
-
+		''' else need more funcs '''
+		return jsonify({
+			"message":"usage: POST /v1/models/<modelname> in form-data with \'file\' header or base64 content"})
 #----------------------------------------------------------
 #|		 API Gate <---> GPU Clusters		  |
 #----------------------------------------------------------
-@app.route('/v1/ser/<uuid:UUID>')
+@app.route('/v1/ser/<uuid:UUID>',strict_slashes=False)
 def v1_gpu(UUID):
 	#with open()
 	pass
-
-
-
-
 
 
 #----------------------------------------------------------
 #|		    Debug / Dev Function		  |
 #----------------------------------------------------------
 
-@app.route('/v1/help')
+@app.route('/v1/help',strict_slashes=False)
 def client_help():
-	return jsonify({'do inference':'POST /v1/models/<modelName>:<method>', "models online":"GET /v1/help/models"})
+	return jsonify({'do inference':'POST /v1/models/<modelName>', "models online":"GET /v1/help/models"})
 
-@app.route('/v1/help/models')
+@app.route('/v1/help/models',strict_slashes=False)
 def client_help_models():
 	return jsonify({"Messages":"This Function Not Online Yet"})
 
@@ -224,13 +195,13 @@ if __name__ == "__main__":
 	dirsave.append(os.path.abspath(os.path.dirname(__file__)) + '/save')
 
 	parser = argparse.ArgumentParser(
-		description="API Gate of Self Designed Inference Service",
+		description="API Gate of Self Designed Inference Service")
 	parser.add_argument('--host',
 		help="Host running IP, default=0.0.0.0",
 		type=str,
 		nargs=1,
 		default='0.0.0.0')
-	parser.add_argument('-p', '--port',
+	parser.add_argument('-p','--port',
 		help="Host running port, default=8501",
 		type=int,
 		nargs=1,

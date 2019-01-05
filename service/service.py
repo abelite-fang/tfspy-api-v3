@@ -68,7 +68,7 @@ def off():
 #----------------------------------------------------------
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(
-		description="Inference Service",
+		description="Inference Service")
 	parser.add_argument('--host',
 		help="Host running IP, default=0.0.0.0",
 		type=str,
@@ -79,8 +79,13 @@ if __name__ == "__main__":
 		type=int,
 		nargs=1,
 		default=8500)
+	parser.add_argument('-m','--model',
+		help="Model config file saved location, default=models.txt",
+		type=str,
+		nargs=1,
+		default='models.txt')
 	parser.add_argument('-f','--file',
-		help="Config file saved location, default=config.txt",
+		help="Service config file saved location, default=config.txt",
 		type=str,
 		nargs=1,
 		default='config.txt')

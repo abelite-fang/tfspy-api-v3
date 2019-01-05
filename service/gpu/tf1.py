@@ -14,17 +14,19 @@ from tensorflow.python.platform import gfile
 from tensorflow.core.protobuf import saved_model_pb2
 from tensorflow.python.util import compat
 
+'''
 try:
     import gpu_utils
     gpu_exist = 1
 except:
     print("no gpu_utils")
     gpu_exist = 0
-
+'''
 
 try:
 		from pynvml import *
 		use_pynvml = 1
+		print("use pynvml")
 except:
 		use_pynvml = 0
 		print("no pynvml")
@@ -59,14 +61,16 @@ class tf_inference():
 					data = compat.as_bytes(pb.read())
 					sm = saved_model_pb2.SavedModel()
 					sm.ParseFromString(data)
-					print("("*30)
-					print(type(sm))
+				#	print("("*30)
+				#	print(type(sm))
 				#	parsed = json.loads(str(sm))
 				#	print(parsed)
 				#	for i in sm.meta_graphs:
 				#		print("-" * 30)
 				#		print(i)
 				#	print(sm.meta_graphs)
+				'''     Next Test     '''
+				'''
 					try:
 						print(sm.meta_graphs[5])
 					except:
@@ -81,6 +85,7 @@ class tf_inference():
 					except:
 						print("no 1")
 					pass
+				'''
 				#	graph_def = tf.GraphDef()
 				#	print("&" * 30)
 				#	print(pb.read())
@@ -111,7 +116,11 @@ class tf_inference():
 
 
 	def detect_gpu(self):
-		nvmlInit()
+		try:
+			nvmlInit()
+		except:
+			print('nvmlInit failed, use cpu only')
+			return
 		self.freeGPU = []
 		try:
 			nvmlDeviceGetCount()
@@ -148,7 +157,9 @@ class tf_inference():
 		self.Workable = 0
 		os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"]="python"
 		if use_pynvml:
+			# if using pynvml, can select one gpu
 			self.detect_gpu() # self Func
+		
 		self.config=tf.ConfigProto(log_device_placement=False)
 		self.sess = tf.Session(graph=tf.Graph(), config=self.config)
 		
@@ -224,6 +235,7 @@ class tf_inference():
 
 	def infer(self, modelName, listofInference):
 		global PATH
+		print('Inference get')
 		self.Workable = 0
 		self.modelName = modelName
 		print(self.modelName)

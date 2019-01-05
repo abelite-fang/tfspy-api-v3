@@ -18,21 +18,35 @@ save_location = '0'
 app = Flask(__name__)
 scheduler = BackgroundScheduler()
 
-service_list = ['http://localhost:8500']
+service_list = ['http://localhost:8500', 'http://cnh.ssh.abelite.ro:8500', 'http://ws.abelite.ro:8500']
 
 def update_healthcheck():
-	global app, service_list
-	now = datetime.datetime.now()
-	for hosts in service_list:
-		url = hosts + '/v1/available'
+	global service_list
+	sort_list = []
+	for host in service_list:
+		url = host + '/v1/available'
 		print(url)
-		resp = requests.get(url)
-		print(resp.text)
-		print(resp.elapsed.total_seconds())
-	pass
+		try:
+			resp = requests.get(url)
+			sort_list.append({resp.elapsed.total_seconds(): host})
+		except:
+			#print(resp.elapsed.total_seconds())
+			sort_list.append({9999999: host})
+	print(sort_list)
+
 scheduler.add_job(update_healthcheck, 'interval', seconds=5 )
 scheduler.start()
 
+def list_sort():
+	global service_list
+	for hosts in service_list:
+		url = hosts + '/v1/available'
+		try:
+			resp = requests.get(url)
+			newList.insert({})
+		except:
+			continue
+		
 
 
 @app.route('/v1/config', methods=['GET'])
@@ -47,18 +61,18 @@ def config_response():
 def health_response():
 	global service_list
 	now = datetime.datetime.now()
-	for hosts in service_list:
-		url = hosts + '/v1/available'
-		print(url)
+	for hosts in range(len(service_list)):
+		url = service_list[hosts] + '/v1/available'
 		try: 
 			resp = requests.get(url)
+			print(url)
 		except:
+			print(url, 'is down')
 			continue
-		print(resp.text)
-		print(resp.elapsed.total_seconds())
+		#print(resp.elapsed.total_seconds())
 		workable = json.loads(resp.text)['workable']
 		if workable == 1:
-			return jsonify({'sendto':hosts})
+			return jsonify({'sendto': service_list[hosts]})
 	return jsonify({'sendto':"0"})
 
 
@@ -70,7 +84,7 @@ if __name__ == "__main__":
 	dirsave.append(os.path.abspath(os.path.dirname(__file__)) + '/config.json')
 
 	parser = argparse.ArgumentParser(
-		description="Reg",
+		description="Reg")
 	parser.add_argument('--host',
 		help="Host running IP, default=0.0.0.0",
 		type=str,
@@ -99,7 +113,7 @@ if __name__ == "__main__":
 		os.makedirs(directory)
 	formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 	
-	handler = logging.FileHandler('reg.log', encoding='UTF-8')
+	handler = logging.FileHandler('log/reg.log', encoding='UTF-8')
 	handler.setLevel(logging.DEBUG)
 	handler.setFormatter(formatter)
 	log = logging.getLogger('werkzeug')
